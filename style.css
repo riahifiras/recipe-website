@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+
+:root{
+    --gold: #fed872;
+    --color1: #ede0d4;
+    --color2: #e6ccb2;
+    --color3: #ddb892;
+    --color4: #b08968;
+    --color5: #7f5539;
+    --color6: #9c6644;
+    --black: #232b2b;
+    --shadow: box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color1);
+    font-family: 'Roboto';
+    font-size: 0.75em;
+}
+
+.front{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+#top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 46px;
+    background-color: var(--color5);
+    color: var(--color1);
+    font-size: 2em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.nav-btn{
+    color: var(--color1);
+    text-decoration: none;
+}
+
+.left{
+    font-family: 'Fasthand';
+    font-size: 1.4em;
+    margin-left: 10px;
+}
+
+.right{
+    font-family: 'Fasthand';
+    margin-right: 20px;
+}
+
+.middle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    max-height: 400px;
+}
+
+.description{
+    min-width: 40%;
+    font-size: 1.4em;  
+    margin-left: 20px; 
+}
+
+.food-image{
+    width: auto;
+    height: 320px;
+    margin-right: 20px;
+}
+
+#bottom{
+    background-color: var(--color5);
+    bottom: 0;
+}
+
+#bottom a{
+    color: var(--color1);
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+
+.btn{
+    width: 200px;
+    height: 60px;
+    font-family: 'Fasthand';
+    font-size: 2.6em;
+    background-color: var(--color5);
+    border: none;
+    color: var(--color1);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 16px;
+}
+
+.btn:hover{
+    color: var(--color5);
+    background-color: var(--color1);
+}

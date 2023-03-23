@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+
+:root{
+    --gold: #fed872;
+    --color1: #ede0d4;
+    --color2: #e6ccb2;
+    --color3: #ddb892;
+    --color4: #b08968;
+    --color5: #7f5539;
+    --color6: #9c6644;
+    --black: #232b2b;
+    --shadow: box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color1);
+    font-family: 'Roboto';
+    font-size: 0.75em;
+    height: 1800px;
+}
+
+.food-pics{
+    width: 200px;
+    height: auto;
+    border: 1px solid var(--black);
+}
+
+.commenter-image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.post{
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+}
+
+.author{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    margin-right: 40vw;
+}
+
+.post-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.images{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+.image1{
+    grid-column: 1 / span 3;
+    min-width: 600px;
+}
+
+table{
+    background: var(--color2);
+    border-radius: 0.25em;
+    border-collapse: collapse;
+    margin: 1em;
+    width: 600px;
+}
+
+th{
+    border-bottom: 1px solid #364043;
+    color: var(--color6);
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    text-align: center;
+}
+
+td{
+    color: var(--black);
+    font-weight: 700;
+    font-size: 1.4;
+    padding: 0.65em 1em;
+    text-align: center;
+    
+}
+
+tbody tr {
+    transition: 0.25s ease;
+}
+
+tbody tr:hover {
+    background: var(--color1);
+}
+
+tbody tr:first-child:hover{
+    background: var(--color2);
+}
+
+.description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.steps{
+    max-width: 600px;
+    font-size: 2em;
+}
+
+.reactions{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    width: 600px;
+}
+
+.likes{
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-left: 10px;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+like:hover{
+
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.commenter{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+.comments{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
