@@ -14,25 +14,14 @@
 
 
 <body>
-    <div class="Notifications">
-        <h2>Notifications</h2>
-        <a href="recipe.html" class="n1">
-            <a href="porifle.html" class="prof">
-                <img class="profile-pic" src="assets/unnamed.png" alt="">
-                <span>kattous has a new recipe</span>
-            </a> 
-        </a>  
-        <a href="porifle.html" class="prof">
-            <img class="profile-pic" src="assets/unnamed.png" alt="">
-            <span>kattous far7an has a new recipe</span> 
-        </a>
-        <a href="porifle.html" class="prof">
-            <img class="profile-pic" src="assets/unnamed.png" alt="">
-            <span>kattous farhoud likes your new recipe</span>
-        </a> 
+    <div class="search-window">
+        <button id="exit"><i class='bx bx-x'></i></button>
+        <div class="bar">
+            <input type="text" class="item" placeholder="Search..">
+            <button><i class='bx bx-search-alt-2'></i></button>
+        </div>
     </div>
-
-        <div class="containter">
+    <div class="containter" >
         <div class="left">
             <a class="title" href="#">
                Brika
@@ -40,43 +29,43 @@
             <div class="buttons">
             
             <a href="profile.html">
-            <button class="button">
+            <button class="button profile">
                 <div>
                     <img class="profile-pic" src="assets/unnamed.png" alt="">
-                    <span>  Profile</span>
+                    <span class="left-btn">  Profile</span>
                 </div>
             </button>
             </a>
 
-            <button class="button">
+            <button class="button search">
                 <div>
                     <i class='bx bx-search-alt-2'></i>
-                    <span> Search</span>
+                    <span class="left-btn"> Search</span>
                 </div>    
             </button>
             
-            <button class="button">
+            <button class="button home">
                 <div>
                     <i class='bx bx-home' ></i>
-                    <span> Home</span>
+                    <span class="left-btn"> Home</span>
                 </div>
             </button>
-            <button class="button">
+            <button class="button notifications">
                 <div>
                     <i class='bx bx-bell' ></i>
-                    <span> Notifications</span>
+                    <span class="left-btn"> Notifications</span>
                 </div>
             </button>
-            <button class="button">
+            <button class="button create">
                 <div>
                     <i class='bx bx-plus' ></i>
-                    <span> Create</span>
+                    <span class="left-btn"> Create</span>
                 </div>
             </button>
-            <button class="button">
+            <button class="button more">
                 <div>
                     <i class='bx bx-dots-horizontal-rounded' ></i>
-                    <span> More</span>
+                    <span class="left-btn"> More</span>
 
                 </div>
             </button>
@@ -88,6 +77,10 @@
         <div class="medium">
             <br>
             <div class="post">
+                <div class="author">
+                    <img src="assets\unnamed.png" alt="couldn't load image" class="author-image">
+                    <h3 class="author-name">Malak</h3>
+                </div>
                 <div class="post-info">
                     <div class="images">
                         <img src="assets\35c1c89e-408c-4449-9abe-f109068f40c0.png" alt="" class="food-pics image1">
@@ -111,6 +104,10 @@
             <hr>
             <br>
             <div class="post">
+                <div class="author">
+                    <img src="assets\unnamed.png" alt="couldn't load image" class="author-image">
+                    <h3 class="author-name">Malak</h3>
+                </div>
                 <div class="post-info">
                     <div class="images">
                         <img src="assets\35c1c89e-408c-4449-9abe-f109068f40c0.png" alt="" class="food-pics image1">
@@ -132,6 +129,10 @@
             <hr>
             <br>
             <div class="post">
+                <div class="author">
+                    <img src="assets\unnamed.png" alt="couldn't load image" class="author-image">
+                    <h3 class="author-name">Malak</h3>
+                </div>
                 <div class="post-info">
                     <div class="images">
                         <img src="assets\35c1c89e-408c-4449-9abe-f109068f40c0.png" alt="" class="food-pics image1">
@@ -152,107 +153,108 @@
         </div>    
 
         <div class="right">
-            <h3> La creme de la creme</h3>
-            
-            <ul class="top10">
-                <li>
+            <a href="recipe.html" class="recipe-of-the-week">
+                <h2>Recipe of the week</h2>
+                <img src="assets\35c1c89e-408c-4449-9abe-f109068f40c0.png" alt="" class="rotw-pic">
+                <h2 class="rotw-name">French Baguette</h2>
+            </a>
+            <div class="leaderboard">
+                <h3> La creme de la creme</h3>
+                
+                <ul class="top10">
+                    <li>
+                        <a href="profile.html">
+                        <div id="first">
+                            <img class="profile-pic" src="assets/unnamed.png" alt="">
+                            <span>kattous farhoud</span>
+                        </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="profile.html">
+                        <div id="second">
+                            <img class="profile-pic" src="assets/unnamed.png" alt="">
+                            <span>kattous mezyen</span>
+                        </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="profile.html">
+                        <div id="third">
+                            <img class="profile-pic" src="assets/unnamed.png" alt="">
+                            <span>kattous far7an</span>
+                        </div>
+                        </a>
+                    </li>
+                    
+                    <li>
                     <a href="profile.html">
-                    <div id="first">
-                        <img class="profile-pic" src="assets/unnamed.png" alt="">
-                        <span>kattous farhoud</span>
-                    </div>
+                        <div>
+                            <img class="profile-pic" src="assets/unnamed.png" alt="">
+                            <span>kattous ji3an</span>
+                        </div>
                     </a>
-                </li>
-                
-                <li>
+                    </li>
+                    
+                    <li>
                     <a href="profile.html">
-                    <div id="second">
-                        <img class="profile-pic" src="assets/unnamed.png" alt="">
-                        <span>kattous mezyen</span>
-                    </div>
+                        <div>
+                            <img class="profile-pic" src="assets/unnamed.png" alt="">
+                            <span>kattous chab3an</span>
+                        </div>
                     </a>
-                </li>
-                
-                <li>
+                    </li>
+                    
+                    <li>
                     <a href="profile.html">
-                    <div id="third">
-                        <img class="profile-pic" src="assets/unnamed.png" alt="">
-                        <span>kattous far7an</span>
-                    </div>
+                        <div>
+                            <img class="profile-pic" src="assets/unnamed.png" alt="">
+                            <span>kattous chef</span>
+                        </div>
                     </a>
-                </li>
-                
-                <li>
-                <a href="profile.html">
-                    <div>
-                        <img class="profile-pic" src="assets/unnamed.png" alt="">
-                        <span>kattous ji3an</span>
-                    </div>
-                </a>
-                </li>
-                
-                <li>
-                <a href="profile.html">
-                    <div>
-                        <img class="profile-pic" src="assets/unnamed.png" alt="">
-                        <span>kattous chab3an</span>
-                    </div>
-                </a>
-                </li>
-                
-                <li>
-                <a href="profile.html">
-                    <div>
-                        <img class="profile-pic" src="assets/unnamed.png" alt="">
-                        <span>kattous chef</span>
-                    </div>
-                </a>
-                </li>
-                
-                <li>
-                <a href="profile.html">
-                    <div>
-                        <img class="profile-pic" src="assets/unnamed.png" alt="">
-                        <span>kattous 7azin</span>
-                    </div>
-                </a>
-                </li>
-                
-                <li>
-                <a href="profile.html">
-                    <div>
-                        <img class="profile-pic" src="assets/unnamed.png" alt="">
-                        <span>kattous omi sisi</span>
-                    </div>
-                </a>
-                </li>
-                
-                <li>
-                <a href="profile.html">
-                    <div>
-                        <img class="profile-pic" src="assets/unnamed.png" alt="">
-                        <span>kattous mda7da7</span>
-                    </div>
-                </a>
-                </li>
+                    </li>
+                    
+                    <li>
+                    <a href="profile.html">
+                        <div>
+                            <img class="profile-pic" src="assets/unnamed.png" alt="">
+                            <span>kattous 7azin</span>
+                        </div>
+                    </a>
+                    </li>
+                    
+                    <li>
+                    <a href="profile.html">
+                        <div>
+                            <img class="profile-pic" src="assets/unnamed.png" alt="">
+                            <span>kattous omi sisi</span>
+                        </div>
+                    </a>
+                    </li>
+                    
+                    <li>
+                    <a href="profile.html">
+                        <div>
+                            <img class="profile-pic" src="assets/unnamed.png" alt="">
+                            <span>kattous mda7da7</span>
+                        </div>
+                    </a>
+                    </li>
 
-                <li>
-                <a href="profile.html">
-                    <div>
-                        <img class="profile-pic" src="assets/unnamed.png" alt="">
-                        <span>kattous</span>
-                    </div>
-                </a>
-                </li> 
-            </ul>
-
+                    <li>
+                    <a href="profile.html">
+                        <div>
+                            <img class="profile-pic" src="assets/unnamed.png" alt="">
+                            <span>kattous</span>
+                        </div>
+                    </a>
+                    </li> 
+                </ul>
+            </div>
         </div>   
-
     </div>
-
-
-
+    <script src="feed.js"></script>
 </body>
-
-
 </html>
