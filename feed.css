@@ -301,3 +301,33 @@ a{
 #exit:hover{
     background: rgba(0, 0, 0, 0);
 }
+.Notifications{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 150px;
+    width: 400px;
+    background-color: var(--color2);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 32px;
+    margin-left: 40%;
+    margin-top: 200px;
+    z-index: 1;
+    gap: 10px;
+    padding-left: 20px;
+    justify-content:center;
+}
+.prof{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+.Notifications a{
+    color: var(--black);
+}
+.Notifications h2{
+    font-family: "Fasthand";
+    font-size: 1.8em;
+    color: var(--color5);
+}
