@@ -302,7 +302,7 @@ a{
     background: rgba(0, 0, 0, 0);
 }
 .Notifications{
-    display: flex;
+    display: none;
     flex-direction: column;
     position: fixed;
     height: 150px;
@@ -316,6 +316,7 @@ a{
     gap: 10px;
     padding-left: 20px;
     justify-content:center;
+   padding-right: 5px;
 }
 .prof{
     display: flex;
@@ -331,3 +332,26 @@ a{
     font-size: 1.8em;
     color: var(--color5);
 }
+
+.Notifications button{
+    width: 10%;
+    height: 40px;
+    border: none;
+}
+
+.exit-button{
+    display: flex;
+    justify-content: space-between;
+}
+#exit1{
+    background: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+#exit1:hover{
+    background: rgba(0, 0, 0, 0);
+}
+.Notifications .bx{
+    color: var(--black);
+}
+
