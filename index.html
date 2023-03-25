@@ -5,48 +5,181 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
 </head>
 <body>
     <div class="front">
-        <header id="top">
+        <nav id="top">
             <a class="nav-btn left " href="">Brika</a>
-            <a class="nav-btn right" href="">Menu</a>
-        </header>
-        <div class="middle">
-            <p class="description">
-                Bienvenue sur notre plateforme, la destination ultime pour les passionnés de cuisine! Nous offrons une plateforme où vous pouvez partager vos recettes préférées et vous connecter avec d'autres personnes partageant votre passion pour la cuisine. Que vous soyez un chef expérimenté ou un novice en cuisine, notre site propose une large gamme de recettes adaptées à tous les niveaux d'expertise culinaire. Les membres de notre communauté peuvent noter et commenter les recettes des autres, fournissant ainsi des commentaires précieux et aidant à améliorer les compétences culinaires. Rejoignez-nous dès aujourd'hui et faites partie de notre communauté florissante de partage de recettes!
+            <div class="menu"><button id="menu_btn"><i class='bx bx-menu'></i></button>
+                <ul class="dropdown" href="">
+                    <li><a href="#" class="nav-btn">About</a></li>
+                    <li><a href="#stats" class="nav-btn">Stats</a></li>
+                    <li><a href="#recipes" class="nav-btn">Recipes</a></li>
+                    <li><a href="#chefs" class="nav-btn">Chefs</a></li>
+                    <li><a href="#team" class="nav-btn">Team</a></li>
+                </ul>
+            </div>
+            <ul class="right" href="">
+                <li><a href="#" class="nav-btn">About</a></li>
+                <li><a href="#stats" class="nav-btn">Stats</a></li>
+                <li><a href="#recipes" class="nav-btn">Recipes</a></li>
+                <li><a href="#chefs" class="nav-btn">Chefs</a></li>
+                <li><a href="#team" class="nav-btn">Team</a></li>
+            </ul>
+        </nav>
+        <div class="about">
+            <div class="middle" id="about">
+                <p class="description">
+                    Bienvenue sur notre plateforme, la destination ultime pour les passionnés de cuisine! Nous offrons une plateforme où vous pouvez partager vos recettes préférées et vous connecter avec d'autres personnes partageant votre passion pour la cuisine. Que vous soyez un chef expérimenté ou un novice en cuisine, notre site propose une large gamme de recettes adaptées à tous les niveaux d'expertise culinaire. Les membres de notre communauté peuvent noter et commenter les recettes des autres, fournissant ainsi des commentaires précieux et aidant à améliorer les compétences culinaires. Rejoignez-nous dès aujourd'hui et faites partie de notre communauté florissante de partage de recettes!
+                </p>
+                <img src="assets\whaattt.png" class="food-image">
+            </div>
+            <div class="buttons">
+                <a href="login.html" target="_blank"><button class="btn login">Log In</button></a>
+                <a href="signup.html" target="_blank"><button class="btn signup">Sign Up</button></a>
+            </div>
+        </div>
+        <h2 class="title" id="stats">Statistics</h2>
+        <div class="stats">
+            <h2 class="text">Join our community of: </h2>
+            <div class="statss">
+                <div class="stat">
+                    <h3>500+</h3>
+                    <h4>Chefs</h4>
+                </div>
+                <div class="stat">
+                    <h3>8000+</h3>
+                    <h4>Users</h4>
+                </div>
+                <div class="stat">
+                    <h3>20000+</h3>
+                    <h4>Recipes</h4>
+                </div>
+            </div>
+        </div>
+        <h2 class="title" id="recipes">Recipe Categories</h2>
+        <div class="recipes">
+            <p class="description rec-desc">
+                Browse and discover delicious recipes on our platform, organized by category. 
+                From mouth-watering appetizers to satisfying main dishes, healthy salads and sides to indulgent desserts, we have something for every taste and occasion. 
+                Explore ethnic and regional cuisines from around the world, try out healthy and special diet options, or find quick and easy recipes for busy weeknights. 
+                Our categories make it easy to find exactly what you're looking for, and our community of recipe creators ensures that you'll always find something new and exciting to try.
             </p>
-            <img src="assets\whaattt.png" class="food-image">
+            <div class="container">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                        <img src="assets\food\food1.jpg" style="width:100%;">
+                    </div>
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                        <img src="assets\food\food2.jpg" style="width:100%;">
+                    </div>             
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                        <img src="assets\food\food3.png" style="width:100%;">
+                    </div>             
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                        <img src="assets\food\food4.jpg" style="width:100%;">
+                    </div>              
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                        <img src="assets\food\food5.jpg" style="width:100%;">
+                    </div>            
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                        <img src="assets\food\food6.jpg" style="width:100%;">
+                    </div>             
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="assets\food\food1.jpg" style="width:100%;" onclick="currentSlide(1)" alt="food1">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="assets\food\food2.jpg" style="width:100%;" onclick="currentSlide(2)" alt="food2">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="assets\food\food3.png" style="width:100%;" onclick="currentSlide(3)" alt="food3">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="assets\food\food4.jpg" style="width:100%;" onclick="currentSlide(4)" alt="food4">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="assets\food\food5.jpg" style="width:100%;" onclick="currentSlide(5)" alt="food5">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="assets\food\food6.jpg" style="width:100%;" onclick="currentSlide(6)" alt="food6">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="buttons">
-            <a href="login.html" target="_blank"><button class="btn login">Log In</button></a>
-            <a href="signup.html" target="_blank"><button class="btn signup">Sign Up</button></a>
+        <h2 class="title" id="chefs">Featured chefs</h2>
+        <div class="chefs">
+            <div class="chef">
+                <img src="assets\chefs\chef2.jpg" alt="" class="chef-pic">
+                <div class="info">
+                    <h3 class="name">Sarah Johnson</h3>
+                    <p class="chef-desc">
+                        A passionate and creative chef with over 15 years of experience in the culinary industry. Chef Johnson has worked in some of the world's best restaurants, including a Michelin-starred establishment in Paris, and has won numerous awards for her innovative and delicious cuisine. She is known for her use of fresh, seasonal ingredients and her unique flavor combinations.
+                    </p>
+                </div>
+            </div>
+            <div class="chef">
+                <img src="assets\chefs\chef1.jpg" alt="" class="chef-pic">
+                <div class="info">
+                    <h3 class="name">Miguel Rodriguez</h3>
+                    <p class="chef-desc">
+                        An expert in Latin American cuisine, Chef Rodriguez has spent years traveling and exploring the flavors and traditions of the region. He is the author of several popular cookbooks, and has appeared on numerous cooking shows and food-related programs. His recipes are known for their bold and spicy flavors, and his passion for sharing the rich culinary heritage of Latin America.
+                    </p>
+                </div>
+            </div>
+            <div class="chef">
+                <img src="assets\chefs\chef3.jpg" alt="" class="chef-pic">
+                <div class="info">
+                    <h3 class="name">Emily Smith</h3>
+                    <p class="chef-desc">
+                        A rising star in the culinary world, Chef Smith has quickly made a name for herself with her modern take on classic dishes. She is known for her use of molecular gastronomy techniques and her focus on sustainability and locally sourced ingredients. Chef Smith has been featured in several food magazines and blogs, and has won several awards for her innovative and delicious creations.
+                    </p>
+                </div>
+            </div>
         </div>
-        <h2 class="title">Meet our team</h2>
+        <h2 class="title" id="team">Meet our team</h2>
         <div class="team">
             <div class="developer">
                 <img src="assets\developers\Firas.jpg" alt="" class="developer-image">
-                <h3 class="name">FIRAS RIAHI</h3>
-                <h4 class="occ">Developer</h4>
-                <h4 class="email">firas.riahi@ensi-uma.tn</h4>
+                <div class="info">
+                    <h3 class="name">FIRAS RIAHI</h3>
+                    <h4 class="occ">Developer</h4>
+                    <h4 class="email">firas.riahi@ensi-uma.tn</h4>
+                </div>
             </div>
             <div class="developer">
                 <img src="assets\developers\saif.jpg" alt="" class="developer-image">
-                <h3 class="name">SEIF SEBAI</h3>
-                <h4 class="occ">Developer</h4>
-                <h4 class="email">saif.sebai@ensi.tn</h4>
+                <div class="info">
+                    <h3 class="name">SEIF SEBAI</h3>
+                    <h4 class="occ">Developer</h4>
+                    <h4 class="email">saif.sebai@ensi.tn</h4>
+                </div>
             </div>
             <div class="developer">
                 <img src="assets\developers\malak.jpg" alt="" class="developer-image">
-                <h3 class="name">MALAK SLIMEN</h3>
-                <h4 class="occ">Developer</h4>
-                <h4 class="email">malak.slimen@ensi-uma.tn</h4>
+                <div class="info">
+                    <h3 class="name">MALAK SLIMEN</h3>
+                    <h4 class="occ">Developer</h4>
+                    <h4 class="email">malak.slimen@ensi-uma.tn</h4>
+                </div>
             </div>
         </div>
     </div>
    <footer id="bottom">
     <p class="copyright">Copyright 2023 | All Rights Reserved | ENSI-école nationale des sciences de l'informatique</p>
    </footer>
+   <script src="index.js"></script>
 </body>
 </html>

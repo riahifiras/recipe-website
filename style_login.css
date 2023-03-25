@@ -24,7 +24,6 @@ body{
     background-color: var(--color1);
     font-family: 'Roboto';
     font-size: 0.75em;
-    height: 1800px;
 }
 
 .container{
@@ -64,6 +63,10 @@ body{
     text-indent: 10px;
 }
 
+.input:focus{
+    outline: none;
+}
+
 .btn{
     background-color: var(--color5);
     color: var(--color2);
@@ -72,6 +75,7 @@ body{
 .btn:hover{
     color: var(--color5);
     background-color: var(--color2);
+    transition: 0.4s ease;
 }
 
 .title{
@@ -82,12 +86,13 @@ body{
 
 .bottom{
     background-color: var(--color5);
+    position: fixed;
+    left: 0;
     bottom: 0;
-}
-
-.bottom a{
-    color: var(--color2);
-    text-decoration: none;
+    right: 0;
+    color: var(--color1);
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-size: 1.2em;
 }
 
