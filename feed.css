@@ -144,6 +144,41 @@ body{
     cursor: pointer;
 }
 
+.dot, .menu{
+    color: #232b2b;
+    font-size: 2em;
+}
+
+.top-left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    color: gray;
+}
+
+.post-info-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--color1);
+    cursor: pointer;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+}
+
 .author{
     display: flex;
     align-items: center;
@@ -399,7 +434,7 @@ li{
     border: none;
 }
 
-.exit:hover{
+.exit:hover, .post-more:hover{
     background-color: var(--color2);
 }
 .Notifications .bx{

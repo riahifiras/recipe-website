@@ -18,6 +18,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body{
@@ -25,6 +26,10 @@ body{
     font-family: 'Roboto';
     font-size: 0.75em;
     height: 1800px;
+}
+
+a, a:hover, a:focus, a:active {
+    color: var(--black);
 }
 
 .food-pics{
@@ -54,18 +59,21 @@ body{
 }
 
 .top{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
-    width: 600px;
+    gap: 10px;
+    margin-left: 40px;
 }
+
+
 
 .author{
     display: flex;
     justify-content: space-between;
     gap: 10px;
     align-items: center;
-    margin-right: 40vw;
 }
 
 .post-info{
@@ -153,15 +161,10 @@ tbody tr:first-child:hover{
     margin-bottom: 10px;
 }
 
-like:hover{
-
-}
-
 .info{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .commenter{
