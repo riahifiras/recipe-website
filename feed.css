@@ -422,7 +422,7 @@ li{
     display: flex;
     justify-content: space-between;
 }
-.exit, .heart{
+.exit, .heart, #exit{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -434,7 +434,7 @@ li{
     border: none;
 }
 
-.exit:hover, .post-more:hover{
+.exit:hover, .post-more:hover, #exit:hover{
     background-color: var(--color2);
 }
 .Notifications .bx{
@@ -504,4 +504,40 @@ li{
         width: 300px;
     }
 }
+.pluss{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    /*height: 200px;*/
+    width: 400px;
+    background-color: var(--color1);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+    margin-left: 40vw;
+    margin-top: 140px;
+    z-index: 1;
+    /*gap: 20px;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*padding-left: 20px;
+    padding-right: 5px;*/
+    /*overflow-x: hidden;
+    overflow-y: auto;*/
+}
 
+.pluss .bx{
+    color: var(--black);
+}
+
+.settings, .mode, .report, .deconnexion{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    background-color: var(--color1);
+    border: none;
+    align-items: center;
+    min-height: 50px;
+    font-size: 1.4em;
+    padding-left: 10px;
+    cursor: pointer;
+}
