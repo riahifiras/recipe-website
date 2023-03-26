@@ -18,12 +18,34 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body{
     background-color: var(--color1);
     font-family: 'Roboto';
     font-size: 0.75em;
+}
+
+.link-to-profile, .link-to-profile:hover, .link-to-profile:focus, .link-to-profile:active {
+    color: var(--black);
+}
+
+#above{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--gold);
+    font-family: 'Fasthand';
+    font-size: 1.4em;
+    background-color: var(--color5);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }
 
 .containter {
@@ -52,14 +74,19 @@ body{
     color: var(--color1);
 }
 
+#ranking{
+    display: none;
+}
+
 .buttons{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     justify-content: left;
 }
 
 .button{
+    width: 200px;
     justify-content: left;
     display: flex;
     /* flex-direction: column; */
@@ -71,6 +98,14 @@ body{
     margin-top: auto;
     margin-bottom: auto;
     cursor: pointer;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.button:hover{
+    background-color: var(--color6);
+    scale: 1.1;
+    transition: 0.2s ease;
 }
 
 .button div{
@@ -101,6 +136,12 @@ body{
 .food-pics{
     width: 100%;
     height: auto;
+}
+
+.clickable-img{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
 }
 
 .author{
@@ -204,10 +245,6 @@ li{
 
 }
 
-a{
-    text-decoration: none;
-}
-
 .top10{
     font-size: 1.8em;
     font-weight: 600;
@@ -260,7 +297,11 @@ a{
     margin-top: 140px;
     z-index: 1;
     gap: 10px;
-    padding-top: 10px;
+    padding-right: 5px;
+    padding-left: 20px;
+    padding-top: 10px;  
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .search-window input{
@@ -270,13 +311,13 @@ a{
     outline: none;
 }
 
-.search-window button{
+.search-window .search-btn{
     width: 10%;
     height: 40px;
     border: none;
 }
 
-.search-window button:hover{
+.search-window .search-btn:hover{
     background-color: gray;
 }
 
@@ -292,66 +333,135 @@ a{
     height: 40px;
 }
 
-#exit{
-    background: rgba(0, 0, 0, 0);
-    cursor: pointer;
-    margin-left: 350px;
-}
-
-#exit:hover{
-    background: rgba(0, 0, 0, 0);
-}
 .Notifications{
     display: none;
     flex-direction: column;
     position: fixed;
-    height: 150px;
+    height: 200px;
     width: 400px;
-    background-color: var(--color2);
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 32px;
-    margin-left: 40%;
-    margin-top: 200px;
+    background-color: var(--color1);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+    margin-left: 40vw;
+    margin-top: 140px;
     z-index: 1;
-    gap: 10px;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 40px;
     padding-left: 20px;
-    justify-content:center;
-   padding-right: 5px;
+    padding-right: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-.prof{
+
+.Notifications::-webkit-scrollbar, .search-window::-webkit-scrollbar{
+    width: 5px;
+}
+
+.Notifications::-webkit-scrollbar-track, .search-window::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+.Notifications::-webkit-scrollbar-thumb, .search-window::-webkit-scrollbar-thumb {
+    background: var(--color5);
+    border-radius: 10px;
+}
+
+.notif{
     display: flex;
     align-items: center;
-    flex-direction: row;
-    gap: 5px;
+    gap: 10px;
 }
+
 .Notifications a{
     color: var(--black);
 }
-.Notifications h2{
+.Notifications h2, .search-window h2{
     font-family: "Fasthand";
     font-size: 1.8em;
     color: var(--color5);
-}
-
-.Notifications button{
-    width: 10%;
-    height: 40px;
-    border: none;
 }
 
 .exit-button{
     display: flex;
     justify-content: space-between;
 }
-#exit1{
+.exit, .heart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
     background: rgba(0, 0, 0, 0);
     cursor: pointer;
+    border: none;
 }
 
-#exit1:hover{
-    background: rgba(0, 0, 0, 0);
+.exit:hover{
+    background-color: var(--color2);
 }
 .Notifications .bx{
     color: var(--black);
+}
+
+@media screen and (max-width: 700px){
+    .logo{
+        display: none;
+    }
+    .left-btn{
+        display: none;
+    }
+    .left{
+        flex-direction: row;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        top: auto;
+        height: 60px;
+        max-width: 9000px;
+        z-index: 1;
+    }
+
+    #ranking{
+        display: block;
+    }
+
+    .button{
+        width: 36px;
+    }
+    
+    .buttons{
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .profile{
+        width: 30px;
+    }
+    
+    .right{
+        display: none;
+    }
+    
+    .food-pics{
+        width: 80vw;
+    }
+
+    .medium{
+        position: absolute;
+        left: 0;
+        margin-left: 80px;
+        margin-top: 100px;
+        padding-bottom: 120px;
+    }
+
+    .search-window, .Notifications{
+        margin-left: 20vw;
+    }
 }
 

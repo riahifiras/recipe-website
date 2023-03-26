@@ -94,9 +94,19 @@ body{
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 1.2em;
+    z-index: -1;
 }
 
 .input::placeholder{
     color: #232b2b;
     opacity: 0.5;
+}
+
+@media screen and (max-width: 700px){
+    .container{
+        width: 300px;
+    }
+    .input, .btn{
+        width: 220px;
+    }
 }
