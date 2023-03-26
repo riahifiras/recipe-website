@@ -32,7 +32,7 @@ body{
 }
 
 #above{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     text-decoration: none;
@@ -407,6 +407,10 @@ li{
 }
 
 @media screen and (max-width: 700px){
+    #above{
+        display: flex;
+    }
+
     .logo{
         display: none;
     }
@@ -455,13 +459,14 @@ li{
     .medium{
         position: absolute;
         left: 0;
-        margin-left: 80px;
+        margin-left: 30px;
         margin-top: 100px;
         padding-bottom: 120px;
     }
 
     .search-window, .Notifications{
-        margin-left: 20vw;
+        margin-left: 14vw;
+        width: 300px;
     }
 }
 
