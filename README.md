@@ -7,7 +7,7 @@ like the leaderboard and the "recipe of the week" challenge
 # landing page preview
 ![index](https://user-images.githubusercontent.com/120566908/228054143-7d6ea601-01ee-40e3-a269-5853c5a7df81.png)
 
-# home page preiew
+# home page preview
 ![feed](https://user-images.githubusercontent.com/120566908/228054220-13a6b601-87b4-4b4c-a4f5-09b2be7e2d1b.png)
 
 # profile page preview
