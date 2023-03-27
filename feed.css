@@ -389,16 +389,110 @@ li{
     overflow-y: auto;
 }
 
-.Notifications::-webkit-scrollbar, .search-window::-webkit-scrollbar{
+.add{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    height: 500px;
+    width: 400px;
+    background-color: var(--color1);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+    margin-left: 40vw;
+    margin-top: 140px;
+    z-index: 1;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.ingredients{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+table{
+    background: var(--color2);
+    border-radius: 0.25em;
+    border-collapse: collapse;
+    width: 360px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+th{
+    border-bottom: 1px solid #364043;
+    color: var(--color6);
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    text-align: center;
+}
+
+td{
+    color: var(--black);
+    font-weight: 700;
+    font-size: 1.4;
+    padding: 0.65em 1em;
+    text-align: center;
+    
+}
+
+tbody tr {
+    transition: 0.25s ease;
+}
+
+tbody tr:hover {
+    background: var(--color1);
+}
+
+tbody tr:first-child:hover{
+    background: var(--color2);
+}
+
+textarea{
+    resize: none;
+    width: 360px;
+    height: 100px;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.box{
+    width: 360px;
+    height: 32px;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.add-btn{
+    background-color: var(--color5);
+    color: var(--color1);
+    cursor: pointer;
+}
+
+.add-btn:hover{
+    background-color: var(--color6);
+}
+
+.Notifications::-webkit-scrollbar, .add::-webkit-scrollbar{
     width: 5px;
 }
 
-.Notifications::-webkit-scrollbar-track, .search-window::-webkit-scrollbar-track {
+.Notifications::-webkit-scrollbar-track, .search-window::-webkit-scrollbar-track, .add::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
 }
 
-.Notifications::-webkit-scrollbar-thumb, .search-window::-webkit-scrollbar-thumb {
+.Notifications::-webkit-scrollbar-thumb, .search-window::-webkit-scrollbar-thumb, .add::-webkit-scrollbar-thumb {
     background: var(--color5);
     border-radius: 10px;
 }
@@ -412,7 +506,7 @@ li{
 .Notifications a{
     color: var(--black);
 }
-.Notifications h2, .search-window h2{
+.Notifications h2, .search-window h2, .add h2{
     font-family: "Fasthand";
     font-size: 1.8em;
     color: var(--color5);
@@ -422,7 +516,7 @@ li{
     display: flex;
     justify-content: space-between;
 }
-.exit, .heart, #exit{
+.exit, .heart, #exit, #exit1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -434,10 +528,14 @@ li{
     border: none;
 }
 
-.exit:hover, .post-more:hover, #exit:hover{
+#exit{
+    margin-right: 5px;
+}
+
+.exit:hover, .post-more:hover, #exit:hover, #exit1:hover{
     background-color: var(--color2);
 }
-.Notifications .bx{
+.Notifications .bx, .add .bx{
     color: var(--black);
 }
 
@@ -499,7 +597,11 @@ li{
         padding-bottom: 120px;
     }
 
-    .search-window, .Notifications{
+    .box, textarea, table{
+        width: 260px;
+    }
+
+    .search-window, .Notifications, .add, #pluss{
         margin-left: 14vw;
         width: 300px;
     }
@@ -540,4 +642,12 @@ li{
     font-size: 1.4em;
     padding-left: 10px;
     cursor: pointer;
+}
+
+.deconnexion{
+    width: 100%;
+}
+
+.settings:hover, .mode:hover, .report:hover, .deconnexion:hover{
+    background-color: var(--color2);
 }

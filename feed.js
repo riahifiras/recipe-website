@@ -122,3 +122,38 @@ function closemore() {
         anchorTags[i].style.userSelect = "auto";
     }
 }
+
+var addButton = document.getElementsByClassName('create')[0];
+var exitButton2 = document.getElementById('exit1');
+
+addButton.addEventListener("click", openAdd);
+exitButton2.addEventListener("click", closeAdd);
+
+function openAdd() {
+    document.getElementsByClassName("add")[0].style.display = "flex";
+    document.getElementsByClassName("containter")[0].style.filter = "blur(5px)";
+    var text = document.getElementsByTagName("p");
+    for(i=0; i<text.length; i++){
+        text[i].style.userSelect = "none";
+    }
+    var anchorTags = document.getElementsByTagName("a");
+    for(i=0; i<anchorTags.length; i++){
+        anchorTags[i].style.pointerEvents = "none";
+        anchorTags[i].style.userSelect = "none";
+       
+    }
+}
+  
+function closeAdd() {
+    document.getElementsByClassName("add")[0].style.display = "none";
+    document.getElementsByClassName("containter")[0].style.filter = "none";
+    var text = document.getElementsByTagName("p");
+    for(i=0; i<text.length; i++){
+        text[i].style.userSelect = "auto";
+    }
+    var anchorTags = document.getElementsByTagName("a");
+    for(i=0; i<anchorTags.length; i++){
+        anchorTags[i].style.pointerEvents = "auto";
+        anchorTags[i].style.userSelect = "auto";
+    }
+}

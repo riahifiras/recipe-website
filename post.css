@@ -100,6 +100,7 @@ table{
     border-collapse: collapse;
     margin: 1em;
     width: 600px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 th{

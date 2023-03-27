@@ -19,7 +19,46 @@
            Brika
         </a>
     </div>
-    <div class="pluss">
+    <div class="add">
+        <div class="exit-button">
+            <h2>Add post</h2>
+            <button id="exit1"><i class='bx bx-x'></i></button>
+        </div>
+        <div>
+            <h5>Add Description:</h5>
+            <textarea id="cool" name="description" rows="4" cols="50" placeholder="Description">           
+            </textarea>
+        </div>  
+        <div>
+            <h5>Add ingredients:</h5>
+            <div class="ingredients">
+                <input id="ingredient" type="text" placeholder="ingredient" class="box">
+                <input id="howMuch" type="text" placeholder="quantity" class="box"> 
+                <button class="box add-btn">Add Ingredient</button>
+            </div>
+            <table id="ingredients">
+                <tr>
+                    <th>Ingredient</th>
+                    <th>quantity</th>
+                </tr>
+                <tr>
+                    <td>Sugar</td>
+                    <td>200g</td>
+                </tr>
+                <tr>
+                    <td>Flour</td>
+                    <td>400g</td>
+                </tr>
+                <tr>
+            </table>
+            <h4>Upload an Image</h4>
+            <label for="img">Select image:</label>
+            <input type="file" id="img" name="img" accept="image/*">
+            <br><br>
+            <button class="box add-btn">salem</button>
+        </div>
+    </div>
+    <div class="pluss" id="pluss">
         <div class="exit-button">
             <h2></h2>
             <button id="exit"><i class='bx bx-x'></i></button>
