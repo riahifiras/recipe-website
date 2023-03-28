@@ -177,6 +177,7 @@ body{
     border-radius: 50%;
     width: 26px;
     height: 26px;
+    transition: 0.2s ease;
 }
 
 .author{
@@ -389,6 +390,31 @@ li{
     overflow-y: auto;
 }
 
+.leaderboard-window{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    height: 400px;
+    width: 400px;
+    background-color: var(--color1);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+    margin-left: 40vw;
+    margin-top: 140px;
+    z-index: 1;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.leaderboardd{
+    gap: 20px;
+}
+
 .add{
     display: none;
     flex-direction: column;
@@ -483,16 +509,16 @@ textarea{
     background-color: var(--color6);
 }
 
-.Notifications::-webkit-scrollbar, .add::-webkit-scrollbar{
+.Notifications::-webkit-scrollbar, .add::-webkit-scrollbar, .leaderboard-window::-webkit-scrollbar{
     width: 5px;
 }
 
-.Notifications::-webkit-scrollbar-track, .search-window::-webkit-scrollbar-track, .add::-webkit-scrollbar-track {
+.Notifications::-webkit-scrollbar-track, .add::-webkit-scrollbar-track, .leaderboard-window::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
 }
 
-.Notifications::-webkit-scrollbar-thumb, .search-window::-webkit-scrollbar-thumb, .add::-webkit-scrollbar-thumb {
+.Notifications::-webkit-scrollbar-thumb, .add::-webkit-scrollbar-thumb, .leaderboard-window::-webkit-scrollbar-thumb {
     background: var(--color5);
     border-radius: 10px;
 }
@@ -506,7 +532,7 @@ textarea{
 .Notifications a{
     color: var(--black);
 }
-.Notifications h2, .search-window h2, .add h2{
+.Notifications h2, .search-window h2, .add h2, .leaderboard-window h2{
     font-family: "Fasthand";
     font-size: 1.8em;
     color: var(--color5);
@@ -516,6 +542,11 @@ textarea{
     display: flex;
     justify-content: space-between;
 }
+
+.heart:hover{
+    scale: 1.2;
+}
+
 .exit, .heart, #exit, #exit1{
     display: flex;
     justify-content: center;
@@ -526,6 +557,7 @@ textarea{
     background: rgba(0, 0, 0, 0);
     cursor: pointer;
     border: none;
+    transition: 0.2s ease;
 }
 
 #exit{
@@ -534,6 +566,7 @@ textarea{
 
 .exit:hover, .post-more:hover, #exit:hover, #exit1:hover{
     background-color: var(--color2);
+    scale: 1.2;
 }
 .Notifications .bx, .add .bx{
     color: var(--black);
@@ -547,6 +580,11 @@ textarea{
     .logo{
         display: none;
     }
+
+    .home{
+        display: none;
+    }
+
     .left-btn{
         display: none;
     }
@@ -601,11 +639,87 @@ textarea{
         width: 260px;
     }
 
-    .search-window, .Notifications, .add, #pluss{
-        margin-left: 14vw;
+    .search-window, .Notifications, .add, #pluss, .leaderboard-window{
+        margin-top: 120px;
+        margin-left: 24vw;
         width: 300px;
     }
 }
+
+@media screen and (max-width: 400px){
+    #above{
+        display: flex;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .home{
+        display: none;
+    }
+
+    .left-btn{
+        display: none;
+    }
+    .left{
+        flex-direction: row;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        top: auto;
+        height: 60px;
+        max-width: 9000px;
+        z-index: 1;
+    }
+
+    #ranking{
+        display: block;
+    }
+
+    .button{
+        width: 36px;
+    }
+    
+    .buttons{
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .profile{
+        width: 30px;
+    }
+    
+    .right{
+        display: none;
+    }
+    
+    .food-pics{
+        width: 80vw;
+    }
+
+    .medium{
+        position: absolute;
+        left: 0;
+        margin-left: 30px;
+        margin-top: 100px;
+        padding-bottom: 120px;
+    }
+
+    .box, textarea, table{
+        width: 260px;
+    }
+
+    .search-window, .Notifications, .add, #pluss, .leaderboard-window{
+        margin-top: 120px;
+        margin-left: 10vh;
+        width: 300px;
+    }
+}
+
 .pluss{
     display: none;
     flex-direction: column;
@@ -627,7 +741,7 @@ textarea{
     overflow-y: auto;*/
 }
 
-.pluss .bx{
+.pluss .bx, .leaderboard-window .bx{
     color: var(--black);
 }
 
@@ -642,7 +756,10 @@ textarea{
     font-size: 1.4em;
     padding-left: 10px;
     cursor: pointer;
+
 }
+
+
 
 .deconnexion{
     width: 100%;
