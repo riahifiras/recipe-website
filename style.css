@@ -333,6 +333,7 @@ li{
 
     .description{
         font-size: 1.2em;
+        margin-left: 10px;
     }
 
     .menu:hover .dropdown{
