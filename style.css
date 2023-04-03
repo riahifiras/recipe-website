@@ -163,12 +163,12 @@ li{
     border: none;
     color: var(--color1);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 16px;
+    transition: 0.4s ease;
 }
 
 .btn:hover{
     color: var(--color5);
     background-color: var(--color1);
-    transition: 0.4s ease;
 }
 
 .text{

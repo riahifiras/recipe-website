@@ -100,12 +100,12 @@ body{
     cursor: pointer;
     border-radius: 20px;
     padding: 5px;
+    transition: 0.2s ease;
 }
 
 .button:hover{
     background-color: var(--color6);
     scale: 1.1;
-    transition: 0.2s ease;
 }
 
 .button div{
@@ -547,10 +547,11 @@ textarea{
     scale: 1.2;
 }
 
-.exit, .heart, #exit, #exit1{
+.exit, .heart{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 5px;
     width: 26px;
     height: 26px;
     border-radius: 50%;
@@ -560,11 +561,8 @@ textarea{
     transition: 0.2s ease;
 }
 
-#exit{
-    margin-right: 5px;
-}
 
-.exit:hover, .post-more:hover, #exit:hover, #exit1:hover{
+.exit:hover, .post-more:hover{
     background-color: var(--color2);
     scale: 1.2;
 }
@@ -734,11 +732,15 @@ textarea{
     z-index: 1;
     /*gap: 20px;*/
     padding-top: 10px;
-    padding-bottom: 10px;
     /*padding-left: 20px;
     padding-right: 5px;*/
     /*overflow-x: hidden;
     overflow-y: auto;*/
+}
+
+.deconnexion{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .pluss .bx, .leaderboard-window .bx{

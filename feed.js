@@ -1,55 +1,36 @@
-
-
 var searchButton = document.getElementsByClassName('search')[0];
-var exitButton = document.getElementsByClassName('exit')[1];
+var exitButton = document.getElementsByClassName('exit')[3];
 
+searchButton.addEventListener("click", () => pop("search-window"));
+exitButton.addEventListener("click", () => disappear("search-window"));
 
-searchButton.addEventListener("click", openSearch);
-exitButton.addEventListener("click", closeSearch);
+var moreButton = document.getElementsByClassName('more')[0];
+var exitButton4 = document.getElementsByClassName('exit')[1];
 
-function openSearch() {
-    document.getElementsByClassName("search-window")[0].style.display = "flex";
-    document.getElementsByClassName("containter")[0].style.filter = "blur(5px)";
-    var text = document.getElementsByTagName("p");
-    for(i=0; i<text.length; i++){
-        text[i].style.userSelect = "none";
-    }
-    var anchorTags = document.getElementsByTagName("a");
-    for(i=0; i<anchorTags.length; i++){
-        anchorTags[i].style.userSelect = "none";
-        anchorTags[i].style.pointerEvents = "none";
-    }
-    /*var buttons = document.getElementsByTagName("button");
-    for(i=0; i<buttons.length; i++){
-        if(buttons[i].className = "exit"){
-            continue;
-        }
-        buttons[i].disabled = true;
-    }*/
-}
-  
-function closeSearch() {
-    document.getElementsByClassName("search-window")[0].style.display = "none";
-    document.getElementsByClassName("containter")[0].style.filter = "none";
-    var text = document.getElementsByTagName("p");
-    for(i=0; i<text.length; i++){
-        text[i].style.userSelect = "auto";
-    }
-    var anchorTags = document.getElementsByTagName("a");
-    for(i=0; i<anchorTags.length; i++){
-        anchorTags[i].style.pointerEvents = "auto";
-        anchorTags[i].style.userSelect = "auto";
-    }
-    
-}
+moreButton.addEventListener("click", () => pop("pluss"));
+exitButton4.addEventListener("click", () => disappear("pluss"));
+
+var addButton = document.getElementsByClassName('create')[0];
+var exitButton2 = document.getElementsByClassName('exit')[0];
+
+addButton.addEventListener("click", () => pop("add"));
+exitButton2.addEventListener("click", () => disappear("add"));
+
+var leaderBoardButton = document.getElementsByClassName('ranking')[0];
+var exitButton3 = document.getElementsByClassName('exit')[4];
+
+leaderBoardButton.addEventListener("click", () => pop("leaderboard-window"));
+exitButton3.addEventListener("click", () => disappear("leaderboard-window"));
+
 var NotificationsButton = document.getElementsByClassName('notifications')[0];
-var exitButton1 = document.getElementsByClassName('exit')[0];
+var exitButton1 = document.getElementsByClassName('exit')[2];
 
-NotificationsButton.addEventListener("click", openNotifications);
-exitButton1.addEventListener("click", closeNotifications);
+NotificationsButton.addEventListener("click", () => pop("Notifications"));
+exitButton1.addEventListener("click", () => disappear("Notifications"));
 
-function openNotifications() {
-    document.getElementsByClassName("Notifications")[0].style.display = "flex";
+
+function pop(cName){
+    document.getElementsByClassName(cName)[0].style.display = "flex";
     document.getElementsByClassName("containter")[0].style.filter = "blur(5px)";
     var text = document.getElementsByTagName("p");
     for(i=0; i<text.length; i++){
@@ -57,13 +38,13 @@ function openNotifications() {
     }
     var anchorTags = document.getElementsByTagName("a");
     for(i=0; i<anchorTags.length; i++){
-        anchorTags[i].style.pointerEvents = "none";
         anchorTags[i].style.userSelect = "none";
+        anchorTags[i].style.pointerEvents = "none";
     }
 }
-  
-function closeNotifications() {
-    document.getElementsByClassName("Notifications")[0].style.display = "none";
+
+function disappear(cName){
+    document.getElementsByClassName(cName)[0].style.display = "none";
     document.getElementsByClassName("containter")[0].style.filter = "none";
     var text = document.getElementsByTagName("p");
     for(i=0; i<text.length; i++){
@@ -92,112 +73,4 @@ for(i=0; i<hearts.length; i++){
         }  
     });
 }
-var moreButton = document.getElementsByClassName('more')[0];
-var exitButton1 = document.getElementById('exit');
 
-moreButton.addEventListener("click", openmore);
-exitButton1.addEventListener("click", closemore);
-
-function openmore() {
-    document.getElementsByClassName("pluss")[0].style.display = "flex";
-    document.getElementsByClassName("containter")[0].style.filter = "blur(5px)";
-    var text = document.getElementsByTagName("p");
-    for(i=0; i<text.length; i++){
-        text[i].style.userSelect = "none";
-    }
-    var anchorTags = document.getElementsByTagName("a");
-    for(i=0; i<anchorTags.length; i++){
-       if(anchorTags[i].id!="poweroff"){
-        
-        anchorTags[i].style.pointerEvents = "none";
-        anchorTags[i].style.userSelect = "none";
-       }
-       
-    }
-}
-  
-function closemore() {
-    document.getElementsByClassName("pluss")[0].style.display = "none";
-    document.getElementsByClassName("containter")[0].style.filter = "none";
-    var text = document.getElementsByTagName("p");
-    for(i=0; i<text.length; i++){
-        text[i].style.userSelect = "auto";
-    }
-    var anchorTags = document.getElementsByTagName("a");
-    for(i=0; i<anchorTags.length; i++){
-        anchorTags[i].style.pointerEvents = "auto";
-        anchorTags[i].style.userSelect = "auto";
-    }
-}
-
-var addButton = document.getElementsByClassName('create')[0];
-var exitButton2 = document.getElementById('exit1');
-
-addButton.addEventListener("click", openAdd);
-exitButton2.addEventListener("click", closeAdd);
-
-function openAdd() {
-    document.getElementsByClassName("add")[0].style.display = "flex";
-    document.getElementsByClassName("containter")[0].style.filter = "blur(5px)";
-    var text = document.getElementsByTagName("p");
-    for(i=0; i<text.length; i++){
-        text[i].style.userSelect = "none";
-    }
-    var anchorTags = document.getElementsByTagName("a");
-    for(i=0; i<anchorTags.length; i++){
-        anchorTags[i].style.pointerEvents = "none";
-        anchorTags[i].style.userSelect = "none";
-       
-    }
-}
-  
-function closeAdd() {
-    document.getElementsByClassName("add")[0].style.display = "none";
-    document.getElementsByClassName("containter")[0].style.filter = "none";
-    var text = document.getElementsByTagName("p");
-    for(i=0; i<text.length; i++){
-        text[i].style.userSelect = "auto";
-    }
-    var anchorTags = document.getElementsByTagName("a");
-    for(i=0; i<anchorTags.length; i++){
-        anchorTags[i].style.pointerEvents = "auto";
-        anchorTags[i].style.userSelect = "auto";
-    }
-}
-
-var leaderBoardButton = document.getElementsByClassName('ranking')[0];
-var exitButton3 = document.getElementsByClassName('exit')[2];
-
-leaderBoardButton.addEventListener("click", openLeaderBoard);
-exitButton3.addEventListener("click", closeLeaderBoard);
-
-function openLeaderBoard() {
-    document.getElementsByClassName("leaderboard-window")[0].style.display = "flex";
-    document.getElementsByClassName("containter")[0].style.filter = "blur(5px)";
-    var text = document.getElementsByTagName("p");
-    for(i=0; i<text.length; i++){
-        text[i].style.userSelect = "none";
-    }
-    var anchorTags = document.getElementsByTagName("a");
-    for(i=0; i<anchorTags.length; i++){
-        if(anchorTags[i].classList[0] == "link-to-profile" || anchorTags[i].classList[0] == "recipe-of-the-week"){
-            continue
-        }
-        anchorTags[i].style.pointerEvents = "none";
-        anchorTags[i].style.userSelect = "none";
-    }
-}
-  
-function closeLeaderBoard() {
-    document.getElementsByClassName("leaderboard-window")[0].style.display = "none";
-    document.getElementsByClassName("containter")[0].style.filter = "none";
-    var text = document.getElementsByTagName("p");
-    for(i=0; i<text.length; i++){
-        text[i].style.userSelect = "auto";
-    }
-    var anchorTags = document.getElementsByTagName("a");
-    for(i=0; i<anchorTags.length; i++){
-        anchorTags[i].style.pointerEvents = "auto";
-        anchorTags[i].style.userSelect = "auto";
-    }
-}

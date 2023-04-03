@@ -70,12 +70,12 @@ body{
 .btn{
     background-color: var(--color5);
     color: var(--color2);
+    transition: 0.4s ease;
 }
 
 .btn:hover{
     color: var(--color5);
     background-color: var(--color2);
-    transition: 0.4s ease;
 }
 
 .title{
