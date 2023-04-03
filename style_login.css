@@ -104,6 +104,7 @@ body{
 
 @media screen and (max-width: 700px){
     .container{
+        margin-top: 40px;
         width: 300px;
     }
     .input, .btn{
