@@ -11,7 +11,7 @@
     --color5: #7f5539;
     --color6: #9c6644;
     --black: #232b2b;
-    --shadow: box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 *{

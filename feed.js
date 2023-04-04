@@ -28,7 +28,6 @@ var exitButton1 = document.getElementsByClassName('exit')[2];
 NotificationsButton.addEventListener("click", () => pop("Notifications"));
 exitButton1.addEventListener("click", () => disappear("Notifications"));
 
-
 function pop(cName){
     document.getElementsByClassName(cName)[0].style.display = "flex";
     document.getElementsByClassName("containter")[0].style.filter = "blur(5px)";
@@ -36,10 +35,23 @@ function pop(cName){
     for(i=0; i<text.length; i++){
         text[i].style.userSelect = "none";
     }
+    var text = document.getElementsByTagName("span");
+    for(i=0; i<text.length; i++){
+        text[i].style.userSelect = "none";
+    }
     var anchorTags = document.getElementsByTagName("a");
     for(i=0; i<anchorTags.length; i++){
-        anchorTags[i].style.userSelect = "none";
-        anchorTags[i].style.pointerEvents = "none";
+        if (anchorTags[i].id == "poweroff"){
+            continue
+        }
+        else{
+            anchorTags[i].style.userSelect = "none";
+            anchorTags[i].style.pointerEvents = "none";
+        }
+    }
+    let buttons = document.getElementsByClassName("button");
+    for(button of buttons){
+        button.style.display = "none";
     }
 }
 
@@ -50,10 +62,18 @@ function disappear(cName){
     for(i=0; i<text.length; i++){
         text[i].style.userSelect = "auto";
     }
+    var text = document.getElementsByTagName("span");
+    for(i=0; i<text.length; i++){
+        text[i].style.userSelect = "auto";
+    }
     var anchorTags = document.getElementsByTagName("a");
     for(i=0; i<anchorTags.length; i++){
         anchorTags[i].style.pointerEvents = "auto";
         anchorTags[i].style.userSelect = "auto";
+    }
+    let buttons = document.getElementsByClassName("button");
+    for(button of buttons){
+        button.style.display = "flex";
     }
 }
 
@@ -74,3 +94,22 @@ for(i=0; i<hearts.length; i++){
     });
 }
 
+
+/*
+const mode = document.getElementsByClassName("mode")[0];
+mode.addEventListener("click", alter);
+
+function alter(){
+    let bg = document.getElementsByTagName("body")[0];
+    bg.style.backgroundColor = "#000000"
+
+}
+*/
+const url = "https://randomuser.me/api/?results=2";
+fetch(url)
+.then(function(response){
+    return response.json();
+})
+.then(function(response){
+    console.log(response);
+})

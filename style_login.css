@@ -79,7 +79,7 @@ body{
 }
 
 .title{
-    font-family: 'Fasthand';
+    font-family: 'Fasthand', cursive;
     font-size: 2.8em;
     color: var(--color5);
 }
@@ -102,10 +102,35 @@ body{
     opacity: 0.5;
 }
 
+.lang-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.lang-btn{
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    color: var(--color1);
+    cursor: pointer;
+}
+
+.lang-btn:hover{
+    text-decoration: underline;
+}
+
+.lang-btn:active{
+    color: red;
+}
+
 @media screen and (max-width: 700px){
     .container{
-        margin-top: 40px;
         width: 300px;
+        margin-top: 40px;
     }
     .input, .btn{
         width: 220px;

@@ -37,7 +37,7 @@ body{
     align-items: center;
     text-decoration: none;
     color: var(--gold);
-    font-family: 'Fasthand';
+    font-family: 'Fasthand',;
     font-size: 1.4em;
     background-color: var(--color5);
     width: 100%;
@@ -219,7 +219,7 @@ body{
 .title{
     text-decoration: none;
     color: var(--gold);
-    font-family: 'Fasthand';
+    font-family: 'Fasthand', cursive;
     font-size: 2.2em;
 }
 
@@ -249,7 +249,7 @@ body{
     background-color: var(--color2);
     width: 90%;
     cursor: pointer;
-    font-family: 'Fasthand';
+    font-family: 'Fasthand', cursive;
 }
 
 .rotw-pic{
@@ -272,7 +272,7 @@ body{
     
 }
 h3{
-    font-family: 'Fasthand';
+    font-family: 'Fasthand', cursive;
     font-size: 2em;
 }
 
@@ -533,7 +533,7 @@ textarea{
     color: var(--black);
 }
 .Notifications h2, .search-window h2, .add h2, .leaderboard-window h2{
-    font-family: "Fasthand";
+    font-family: "Fasthand", cursive;
     font-size: 1.8em;
     color: var(--color5);
 }
@@ -741,6 +741,7 @@ textarea{
 .deconnexion{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    width: 100%;
 }
 
 .pluss .bx, .leaderboard-window .bx{
@@ -759,12 +760,6 @@ textarea{
     padding-left: 10px;
     cursor: pointer;
 
-}
-
-
-
-.deconnexion{
-    width: 100%;
 }
 
 .settings:hover, .mode:hover, .report:hover, .deconnexion:hover{

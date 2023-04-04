@@ -59,7 +59,7 @@ li{
 }
 
 .left{
-    font-family: 'Fasthand';
+    font-family: 'Fasthand', cursive;
     font-size: 1.4em;
     margin-left: 10px;
 }
@@ -69,7 +69,7 @@ li{
     flex-direction: row;
     gap: 28px;
     align-items: center;
-    font-family: 'Fasthand';
+    font-family: 'Fasthand', cursive;
     margin-right: 20px;
 }
 
@@ -157,7 +157,7 @@ li{
 .btn{
     width: 200px;
     height: 60px;
-    font-family: 'Fasthand';
+    font-family: 'Fasthand', cursive;
     font-size: 2.6em;
     background-color: var(--color5);
     border: none;
@@ -306,7 +306,7 @@ li{
 
 .title{
     padding-top: 46px;
-    font-family: 'Fasthand';
+    font-family: 'Fasthand', cursive;
     font-size: 4.8em;
     color: var(--color5);
     margin-left: 40px;
@@ -318,6 +318,32 @@ li{
     padding-bottom: 5px;
     font-size: 1.2em;
 }
+
+.lang-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.lang-btn{
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    color: var(--color1);
+    cursor: pointer;
+}
+
+.lang-btn:hover{
+    text-decoration: underline;
+}
+
+.lang-btn:active{
+    color: red;
+}
+
 
 @media screen and (max-width: 700px){
     .right{
