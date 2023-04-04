@@ -1,4 +1,5 @@
 const langs = ['eng', 'fr', 'ger', 'ita', 'spa', 'port', 'finn', 'nor', 'pol', 'swd', 'jp', 'kr', 'cn', 'tr'];
+localStorage.setItem("lang", "eng");
 var currentLang = localStorage.getItem("lang");
 
 for(var i of langs){
