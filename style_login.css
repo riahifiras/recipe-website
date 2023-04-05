@@ -12,7 +12,7 @@
     --color5: #7f5539;
     --color6: #9c6644;
     --black: #232b2b;
-    --shadow: box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 *{
@@ -127,6 +127,24 @@ body{
 
 .lang-btn:active{
     color: red;
+}
+
+.mode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 2.2em;
+    background-color: var(--color5);
+    color: var(--white);
+    box-shadow: var(--shadow);
+    width: 56px;
+    height: 56px;
+    position: sticky;
+    float: right;
+    right: 10px;
 }
 
 @media screen and (max-width: 700px){
