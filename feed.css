@@ -340,6 +340,7 @@ li{
     padding-top: 10px;  
     overflow-x: hidden;
     overflow-y: auto;
+    transition: 0.4s ease;
 }
 
 .search-window input{

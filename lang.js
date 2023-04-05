@@ -19,8 +19,8 @@ for(var i of lang_items){
     }
 }
 
-
-const engBtn = document.getElementsByClassName("lang-eng")[0];
+try {
+    const engBtn = document.getElementsByClassName("lang-eng")[0];
 engBtn.addEventListener("click", () => langChange("eng"));
 const frBtn = document.getElementsByClassName("lang-fr")[0];
 frBtn.addEventListener("click", () => langChange("fr"));
@@ -48,6 +48,10 @@ const cnBtn = document.getElementsByClassName("lang-cn")[0];
 cnBtn.addEventListener("click", () => langChange("cn"));
 const trBtn = document.getElementsByClassName("lang-tr")[0];
 trBtn.addEventListener("click", () => langChange("tr"));
+
+} catch (error) {
+    console.log("rlly don't mind :)");
+}
 
 function langChange(i){
     localStorage.setItem("lang", i);

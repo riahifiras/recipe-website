@@ -359,7 +359,7 @@ li{
     box-shadow: var(--shadow);
     width: 56px;
     height: 56px;
-    position: sticky;
+    position: fixed;
     bottom: 40px;
     float: right;
     right: 10px;

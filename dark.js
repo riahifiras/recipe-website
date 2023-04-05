@@ -19,9 +19,13 @@ else{
     document.documentElement.style.setProperty('--color6', '#9c6644');
     document.documentElement.style.setProperty('--black', '#232b2b');
 }
+try {
+    const modeBtn = document.getElementsByClassName("mode")[0];
+    modeBtn.addEventListener("click", changeMode);
+} catch (error) {
+    console.log("don't mind");
+}
 
-const modeBtn = document.getElementsByClassName("mode")[0];
-modeBtn.addEventListener("click", changeMode);
 
 function changeMode(){
     
