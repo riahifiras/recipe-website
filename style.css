@@ -4,6 +4,7 @@
 
 :root{
     --gold: #fed872;
+    --white: #fff;
     --color1: #ede0d4;
     --color2: #e6ccb2;
     --color3: #ddb892;
@@ -25,6 +26,7 @@ body{
     background-color: var(--color1);
     font-family: 'Roboto';
     font-size: 0.75em;
+    color: var(--black);
 }
 
 li{
@@ -182,7 +184,7 @@ li{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: white;
+    background-color: var(--white);
     min-height: 340px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 16px;
 }
@@ -221,7 +223,7 @@ li{
     width: auto;
     padding: 16px;
     margin-top: -50px;
-    color: white;
+    color: var(--white);
     font-weight: bold;
     font-size: 20px;
     border-radius: 0 3px 3px 0;
@@ -250,7 +252,7 @@ li{
     text-align: center;
     background-color: #222;
     padding: 2px 16px;
-    color: white;
+    color: var(--white);
 }
 
 .column {
@@ -283,7 +285,7 @@ li{
     padding-left: 20px;
     padding-right: 20px;
     min-height: 500px;
-    background-color: white;
+    background-color: var(--white);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 16px;
 }
 

@@ -1,5 +1,4 @@
 const langs = ['eng', 'fr', 'ger', 'ita', 'spa', 'port', 'finn', 'nor', 'pol', 'swd', 'jp', 'kr', 'cn', 'tr'];
-localStorage.setItem("lang", "eng");
 var currentLang = localStorage.getItem("lang");
 
 for(var i of langs){
@@ -12,7 +11,12 @@ for(var i of langs){
 var lang_items = document.getElementsByClassName(currentLang);
 
 for(var i of lang_items){
-    i.style.display = "block";
+    if(i.tagName == "P"){
+        i.style.display = "block";
+    }
+    else{
+        i.style.display = "inline";
+    }
 }
 
 

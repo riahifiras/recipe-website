@@ -4,6 +4,7 @@
 
 :root{
     --gold: #fed872;
+    --white: #fff;
     --color1: #ede0d4;
     --color2: #e6ccb2;
     --color3: #ddb892;
@@ -26,6 +27,7 @@ body{
     font-family: 'Roboto';
     font-size: 0.75em;
     height: 1800px;
+    color: var(--black);
 }
 
 a, a:hover, a:focus, a:active {

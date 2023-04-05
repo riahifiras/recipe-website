@@ -4,6 +4,7 @@
 
 :root{
     --gold: #fed872;
+    --white: #fff;
     --color1: #ede0d4;
     --color2: #e6ccb2;
     --color3: #ddb892;
@@ -25,6 +26,7 @@ body{
     background-color: var(--color1);
     font-family: 'Roboto';
     font-size: 0.75em;
+    color: var(--black);
 }
 
 .link-to-profile, .link-to-profile:hover, .link-to-profile:focus, .link-to-profile:active {
@@ -749,6 +751,7 @@ textarea{
 }
 
 .settings, .mode, .report, .deconnexion{
+    color: var(--black);
     display: flex;
     flex-direction: row;
     gap: 5px;

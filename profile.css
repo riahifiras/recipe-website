@@ -4,6 +4,7 @@
 
 :root{
     --gold: #fed872;
+    --white: #fff;
     --color1: #ede0d4;
     --color2: #e6ccb2;
     --color3: #ddb892;
@@ -24,6 +25,7 @@ body{
     background-color: white;
     font-family: 'Roboto';
     font-size: 0.75em;
+    color: var(--black);
 }
 
 .profile-pic{
