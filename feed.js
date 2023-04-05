@@ -112,6 +112,7 @@ function changeMode(){
     let mode = localStorage.getItem("mode");
     if(mode == "light"){
         localStorage.setItem("mode", "dark");
+        document.documentElement.style.setProperty('--white', '#000000');
         document.documentElement.style.setProperty('--color1', '#2d241f');
         document.documentElement.style.setProperty('--color2', '#3d3328');
         document.documentElement.style.setProperty('--color3', '#514739');
@@ -122,6 +123,7 @@ function changeMode(){
     }
     else{
         localStorage.setItem("mode", "light");
+        document.documentElement.style.setProperty('--white', '#ffffff');
         document.documentElement.style.setProperty('--color1', '#ede0d4');
         document.documentElement.style.setProperty('--color2', '#e6ccb2');
         document.documentElement.style.setProperty('--color3', '#ddb892');

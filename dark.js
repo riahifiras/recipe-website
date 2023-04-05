@@ -10,7 +10,7 @@ if(mode == "dark"){
     document.documentElement.style.setProperty('--black', '#ffffff');
 }
 else{
-    document.documentElement.style.setProperty('--white', '#000000');
+    document.documentElement.style.setProperty('--white', '#ffffff');
     document.documentElement.style.setProperty('--color1', '#ede0d4');
     document.documentElement.style.setProperty('--color2', '#e6ccb2');
     document.documentElement.style.setProperty('--color3', '#ddb892');
