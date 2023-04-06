@@ -29,6 +29,17 @@ body{
     color: var(--black);
 }
 
+.out{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
 .link-to-profile, .link-to-profile:hover, .link-to-profile:focus, .link-to-profile:active {
     color: var(--black);
 }
@@ -333,7 +344,7 @@ li{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-left: 40vw;
     margin-top: 140px;
-    z-index: 1;
+    z-index: 2;
     gap: 10px;
     padding-right: 5px;
     padding-left: 20px;
@@ -383,7 +394,7 @@ li{
     box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     margin-left: 40vw;
     margin-top: 140px;
-    z-index: 1;
+    z-index: 2;
     gap: 20px;
     padding-top: 10px;
     padding-bottom: 40px;
@@ -404,7 +415,7 @@ li{
     box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     margin-left: 40vw;
     margin-top: 140px;
-    z-index: 1;
+    z-index: 2;
     gap: 20px;
     padding-top: 10px;
     padding-bottom: 40px;
@@ -429,7 +440,7 @@ li{
     box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     margin-left: 40vw;
     margin-top: 140px;
-    z-index: 1;
+    z-index: 2;
     gap: 20px;
     padding-top: 10px;
     padding-bottom: 40px;
@@ -625,7 +636,7 @@ textarea{
         top: auto;
         height: 60px;
         max-width: 9000px;
-        z-index: 1;
+        z-index: 2;
     }
 
     #ranking{
@@ -699,7 +710,7 @@ textarea{
         top: auto;
         height: 60px;
         max-width: 9000px;
-        z-index: 1;
+        z-index: 2;
     }
 
     #ranking{
@@ -759,7 +770,7 @@ textarea{
     box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
     margin-left: 40vw;
     margin-top: 140px;
-    z-index: 1;
+    z-index: 2;
     /*gap: 20px;*/
     padding-top: 10px;
     /*padding-left: 20px;

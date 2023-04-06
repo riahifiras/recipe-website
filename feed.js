@@ -31,6 +31,9 @@ NotificationsButton.addEventListener("click", () => pop("Notifications"));
 exitButton1.addEventListener("click", () => disappear("Notifications"));
 
 function pop(cName){
+    let out = document.getElementsByClassName("out")[0];
+    out.style.display = "block";
+    out.addEventListener("click", () => disappear(cName));
     document.getElementsByClassName(cName)[0].style.display = "flex";
     document.getElementsByClassName("containter")[0].style.filter = "blur(5px)";
     var text = document.getElementsByTagName("p");
@@ -63,6 +66,8 @@ function pop(cName){
 }
 
 function disappear(cName){
+    let out = document.getElementsByClassName("out")[0];
+    out.style.display = "none";
     document.getElementsByClassName(cName)[0].style.display = "none";
     document.getElementsByClassName("containter")[0].style.filter = "none";
     var text = document.getElementsByTagName("p");
