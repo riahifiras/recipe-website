@@ -9,7 +9,7 @@ for(var i of langs){
 }
 
 if(localStorage.getItem("lang") == ""){
-    localStorage.setItem("lang", "eng")
+    langChange("eng");
 }
 
 var lang_items = document.getElementsByClassName(currentLang);
