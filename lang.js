@@ -1,7 +1,7 @@
 
 const langs = ['eng', 'fr', 'ger', 'ita', 'spa', 'port', 'finn', 'nor', 'pol', 'swd', 'jp', 'kr', 'cn', 'tr'];
-var currentLang = localStorage.getItem("lang"); /*gets the current language preference from local storage 
-                                                  and stores it in a variable called currentLang.*/
+//gets the current language preference from local storage and stores it in a variable called currentLang.
+var currentLang = localStorage.getItem("lang"); 
 
  ​function Once(){
     localStorage.setItem("lang", "eng");
@@ -10,15 +10,14 @@ var currentLang = localStorage.getItem("lang"); /*gets the current language pref
 }
                                                   
 Once();
-for(var i of langs){  //selects all elements with that class name, and sets their display style property to "none". 
+for(var i of langs){
     let lang = document.getElementsByClassName(i);
     for(j of lang){
         j.style.display = "none";
     }
 }
-
-if(localStorage.getItem("lang") == null){ /*checks whether the lang preference has been set in local storage. 
-                                            If not, it sets the default language preference to "eng" (English).*/
+//checks whether the lang preference has been set in local storage. If not, it sets the default language preference to "eng" (English).
+if(localStorage.getItem("lang") == null){ 
     localStorage.setItem("lang", "eng")
 }
 
@@ -31,10 +30,6 @@ for(var i of lang_items){
         i.style.display = "inline";
     }
 }
-/*selects all elements with the current language-specific class name and sets
-    their display property to "block" if their tag name is "P" (paragraph), 
-    and "inline" otherwise. This displays only the elements that correspond 
-    to the current language preference. */
 
 try {
     const engBtn = document.getElementsByClassName("lang-eng")[0];
