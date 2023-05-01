@@ -36,33 +36,11 @@ function pop(cName){
     out.addEventListener("click", () => disappear(cName));
     document.getElementsByClassName(cName)[0].style.display = "flex";
     document.getElementsByClassName("containter")[0].style.filter = "blur(5px)";
-    var text = document.getElementsByTagName("p");
-    for(i=0; i<text.length; i++){
-        text[i].style.userSelect = "none";
-    }
-    var text = document.getElementsByTagName("span");
-    for(i=0; i<text.length; i++){
-        text[i].style.userSelect = "none";
-    }
-    var anchorTags = document.getElementsByTagName("a");
-    for(i=0; i<anchorTags.length; i++){
-        if (anchorTags[i].id == "poweroff"){
-            continue
-        }
-        else{
-            anchorTags[i].style.userSelect = "none";
-            anchorTags[i].style.pointerEvents = "none";
-        }
-    }
     document.onkeydown = function (e) {
         if(e.key == "Escape"){
             disappear(cName);
         }
     };
-    //let buttons = document.getElementsByClassName("button");
-    /*for(button of buttons){
-        button.style.display = "none";
-    }*/
 }
 
 function disappear(cName){
@@ -70,26 +48,6 @@ function disappear(cName){
     out.style.display = "none";
     document.getElementsByClassName(cName)[0].style.display = "none";
     document.getElementsByClassName("containter")[0].style.filter = "none";
-    var text = document.getElementsByTagName("p");
-    for(i=0; i<text.length; i++){
-        text[i].style.userSelect = "auto";
-    }
-    var text = document.getElementsByTagName("span");
-    for(i=0; i<text.length; i++){
-        text[i].style.userSelect = "auto";
-    }
-    var anchorTags = document.getElementsByTagName("a");
-    for(i=0; i<anchorTags.length; i++){
-        anchorTags[i].style.pointerEvents = "auto";
-        anchorTags[i].style.userSelect = "auto";
-    }
-    let buttons = document.getElementsByClassName("button");
-    /*for(button of buttons){
-        if(button.id == "ranking" && screen.width > 700){
-            continue;
-        }
-        button.style.display = "flex";
-    }*/
 }
 
 var hearts = document.getElementsByClassName("heart");

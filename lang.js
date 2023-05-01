@@ -8,6 +8,10 @@ for(var i of langs){
     }
 }
 
+if(localStorage.getItem("lang") == ""){
+    localStorage.setItem("lang", "eng")
+}
+
 var lang_items = document.getElementsByClassName(currentLang);
 
 for(var i of lang_items){
