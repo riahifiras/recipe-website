@@ -1,19 +1,20 @@
 const langs = ['eng', 'fr', 'ger', 'ita', 'spa', 'port', 'finn', 'nor', 'pol', 'swd', 'jp', 'kr', 'cn', 'tr'];
-var currentLang = localStorage.getItem("lang");
+var currentLang = localStorage.getItem("lang"); /*gets the current language preference from local storage 
+                                                  and stores it in a variable called currentLang.*/
 
-for(var i of langs){
+for(var i of langs){                              //selects all elements with that class name, and sets their display style property to "none". 
     let lang = document.getElementsByClassName(i);
     for(j of lang){
         j.style.display = "none";
     }
 }
 
-if(localStorage.getItem("lang") == ""){
-    langChange("eng");
+if(localStorage.getItem("lang") == null){ /*checks whether the lang preference has been set in local storage. 
+                                            If not, it sets the default language preference to "eng" (English).*/
+    localStorage.setItem("lang", "eng")
 }
 
 var lang_items = document.getElementsByClassName(currentLang);
-
 for(var i of lang_items){
     if(i.tagName == "P"){
         i.style.display = "block";
@@ -22,6 +23,10 @@ for(var i of lang_items){
         i.style.display = "inline";
     }
 }
+/*selects all elements with the current language-specific class name and sets
+    their display property to "block" if their tag name is "P" (paragraph), 
+    and "inline" otherwise. This displays only the elements that correspond 
+    to the current language preference. */
 
 try {
     const engBtn = document.getElementsByClassName("lang-eng")[0];
@@ -56,6 +61,8 @@ trBtn.addEventListener("click", () => langChange("tr"));
 } catch (error) {
     console.log("rlly don't mind :)");
 }
+/*sets up event listeners for each language button on the page. When a language button is clicked, 
+it calls the langChange function with the corresponding language code as an argument. */
 
 function langChange(i){
     localStorage.setItem("lang", i);
@@ -78,3 +85,6 @@ function langChange(i){
         }
     }
 }
+/* updates the current language preference in local storage and calls the same code used earlier
+ to hide all elements with language-specific class names and display only the elements 
+ that correspond to the new language preference.*/
