@@ -1,8 +1,16 @@
+
 const langs = ['eng', 'fr', 'ger', 'ita', 'spa', 'port', 'finn', 'nor', 'pol', 'swd', 'jp', 'kr', 'cn', 'tr'];
 var currentLang = localStorage.getItem("lang"); /*gets the current language preference from local storage 
                                                   and stores it in a variable called currentLang.*/
 
-for(var i of langs){                              //selects all elements with that class name, and sets their display style property to "none". 
+ ​function Once(){
+    localStorage.setItem("lang", "eng");
+    langChange("eng");
+    Once = undefined;
+}
+                                                  
+Once();
+for(var i of langs){  //selects all elements with that class name, and sets their display style property to "none". 
     let lang = document.getElementsByClassName(i);
     for(j of lang){
         j.style.display = "none";
