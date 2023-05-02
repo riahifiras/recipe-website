@@ -1,6 +1,6 @@
 <?php
 # Include connection
-require_once "config\config.php";
+require_once "config.php";
 
 # Define variables and initialize with empty values
 $username_err = $email_err = $password_err = $name_err ="";
