@@ -3,13 +3,7 @@ const langs = ['eng', 'fr', 'ger', 'ita', 'spa', 'port', 'finn', 'nor', 'pol', '
 //gets the current language preference from local storage and stores it in a variable called currentLang.
 var currentLang = localStorage.getItem("lang"); 
 
- ​function Once(){
-    localStorage.setItem("lang", "eng");
-    langChange("eng");
-    Once = undefined;
-}
-                                                  
-Once();
+
 for(var i of langs){
     let lang = document.getElementsByClassName(i);
     for(j of lang){
@@ -18,7 +12,7 @@ for(var i of langs){
 }
 //checks whether the lang preference has been set in local storage. If not, it sets the default language preference to "eng" (English).
 if(localStorage.getItem("lang") == null){ 
-    localStorage.setItem("lang", "eng")
+    langChange("eng");
 }
 
 var lang_items = document.getElementsByClassName(currentLang);
@@ -32,7 +26,7 @@ for(var i of lang_items){
 }
 
 try {
-    const engBtn = document.getElementsByClassName("lang-eng")[0];
+const engBtn = document.getElementsByClassName("lang-eng")[0];
 engBtn.addEventListener("click", () => langChange("eng"));
 const frBtn = document.getElementsByClassName("lang-fr")[0];
 frBtn.addEventListener("click", () => langChange("fr"));
