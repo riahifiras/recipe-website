@@ -9,7 +9,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == TRUE) {
 }
 
 # Include connection
-require_once "./config.php";
+require_once "config.php";
 
 # Define variables and initialize with empty values
 $user_login_err = $user_password_err = $login_err = "";
@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               $_SESSION["loggedin"] = TRUE;
 
               # Redirect user to index page
-              echo "<script>" . "window.location.href='./'" . "</script>";
+              echo "<script>" . "window.location.href='feed.php'" . "</script>";
               exit;
             } else {
               # If password is incorrect show an error message
@@ -93,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_login.css">
+    <link rel="stylesheet" href="css\style_login.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
 </head>
@@ -106,9 +106,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           }
         ?>
         <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" novalidate class="form">
-            <input type="text" class="username input" placeholder="username">
+            <input type="text" class="username input" placeholder="username" name="user_login" value="<?= $user_login; ?>">
             <small class="text-danger"><?= $user_login_err; ?></small>
-            <input type="password" class="password input" placeholder="password">
+            <input type="password" class="password input" placeholder="password" name="user_password" id="password">
             <small class="text-danger"><?= $user_password_err; ?></small>  
             <button class="btn" type="submit">
               <span class="eng">Log In</span>
@@ -212,9 +212,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </p>
     </footer>
     <!--<button class="mode"><i class='bx bx-moon' ></i></button>-->
-    <script src="lang.js"></script>
-    <script src="dark.js"></script>
-    <script src="login_verif.js"></script>
+    <script src="js\lang.js"></script>
+    <script src="js\dark.js"></script>
+    <!--<script src="login_verif.js"></script>-->
     
 </body>
 </html>

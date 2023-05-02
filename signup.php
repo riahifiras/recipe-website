@@ -1,6 +1,6 @@
 <?php
 # Include connection
-require_once "./config.php";
+require_once "config\config.php";
 
 # Define variables and initialize with empty values
 $username_err = $email_err = $password_err = $name_err ="";
@@ -167,11 +167,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   # Check input errors before inserting data into database
   if (empty($username_err) && empty($email_err) && empty($password_err)&&empty($name_err)) {
     # Prepare an insert statement
-    $sql = "INSERT INTO users(username , name,email ,password) VALUES (?, ?, ?,?)";
+    $sql = "INSERT INTO users( email , name, username, password) VALUES (?, ?, ?,?)";
 
     if ($stmt = mysqli_prepare($link, $sql)) {
       # Bind varibales to the prepared statement as parameters
-      mysqli_stmt_bind_param($stmt, "sss",$param_email, $param_name, $param_username, $param_password);
+      mysqli_stmt_bind_param($stmt, "ssss",$param_email, $param_name, $param_username, $param_password);
 
       # Set parameters
       $param_name = $name;
@@ -180,13 +180,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $param_password = password_hash($password, PASSWORD_DEFAULT);
 
       # Execute the prepared statement
-    /*  if (mysqli_stmt_execute($stmt)) {
+    if (mysqli_stmt_execute($stmt)) {
         echo "<script>" . "alert('Registeration completed successfully. Login to continue.');" . "</script>";
         echo "<script>" . "window.location.href='./login.php';" . "</script>";
         exit;
       } else {
         echo "<script>" . "alert('Oops! Something went wrong. Please try again later.');" . "</script>";
-      }*/
+      }
 
       # Close statement
       mysqli_stmt_close($stmt);
@@ -203,7 +203,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_login.css">
+    <link rel="stylesheet" href="css\style_login.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
 </head>
@@ -214,6 +214,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="email" class="email input" placeholder="example@ensi.com" name="email" value="<?= $email; ?>">
             <small class="text-danger"><?= $email_err; ?></small>
             <input type="text" class="name input" placeholder="Full name" name="name" value="<?= $name; ?>">
+            <small class="text-danger"><?= $name_err; ?></small>
             <input type="text" class="username input" placeholder="username" name="username" value="<?= $username; ?>">
             <small class="text-danger"><?= $username_err; ?></small>
             <input type="password" class="password1 input" placeholder="password" name="password" value="<?= $password; ?>">
@@ -305,8 +306,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </p>
     </footer>
     <!--<button class="mode"><i class='bx bx-moon' ></i></button>-->
-    <script src="lang.js"></script>
-    <script src="dark.js"></script>
+    <script src="js\lang.js"></script>
+    <script src="js\dark.js"></script>
     <!--<script src="signup_verif.js"></script>-->
     
 </body>

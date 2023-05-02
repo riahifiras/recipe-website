@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+
+:root{
+    --gold: #fed872;
+    --white: #fff;
+    --color1: #ede0d4;
+    --color2: #e6ccb2;
+    --color3: #ddb892;
+    --color4: #b08968;
+    --color5: #7f5539;
+    --color6: #9c6644;
+    --black: #232b2b;
+    --shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    font-family: 'Roboto';
+    font-size: 0.75em;
+    color: var(--black);
+}
+
+.profile-pic{
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.background-pic{
+    background-image: url("assets\\82122519_2766256716786707_8563557445488607232_n.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.top{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: -120px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about, .posts{
+    background-color: var(--color1);
+    padding: 20px;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.food-pics{
+    width: 76vw;
+    height: auto;
+}
+
+.post{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 78vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.likes{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
