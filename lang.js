@@ -1,8 +1,7 @@
-
 const langs = ['eng', 'fr', 'ger', 'ita', 'spa', 'port', 'finn', 'nor', 'pol', 'swd', 'jp', 'kr', 'cn', 'tr'];
-//gets the current language preference from local storage and stores it in a variable called currentLang.
-var currentLang = localStorage.getItem("lang"); 
+var currentLang = localStorage.getItem("lang");
 
+  
 
 for(var i of langs){
     let lang = document.getElementsByClassName(i);
@@ -10,12 +9,12 @@ for(var i of langs){
         j.style.display = "none";
     }
 }
-//checks whether the lang preference has been set in local storage. If not, it sets the default language preference to "eng" (English).
-if(localStorage.getItem("lang") == null){ 
+
+if(localStorage.getItem("lang") == null){
     langChange("eng");
 }
-
 var lang_items = document.getElementsByClassName(currentLang);
+
 for(var i of lang_items){
     if(i.tagName == "P"){
         i.style.display = "block";
@@ -26,7 +25,7 @@ for(var i of lang_items){
 }
 
 try {
-const engBtn = document.getElementsByClassName("lang-eng")[0];
+    const engBtn = document.getElementsByClassName("lang-eng")[0];
 engBtn.addEventListener("click", () => langChange("eng"));
 const frBtn = document.getElementsByClassName("lang-fr")[0];
 frBtn.addEventListener("click", () => langChange("fr"));
@@ -58,8 +57,6 @@ trBtn.addEventListener("click", () => langChange("tr"));
 } catch (error) {
     console.log("rlly don't mind :)");
 }
-/*sets up event listeners for each language button on the page. When a language button is clicked, 
-it calls the langChange function with the corresponding language code as an argument. */
 
 function langChange(i){
     localStorage.setItem("lang", i);
@@ -82,6 +79,3 @@ function langChange(i){
         }
     }
 }
-/* updates the current language preference in local storage and calls the same code used earlier
- to hide all elements with language-specific class names and display only the elements 
- that correspond to the new language preference.*/
