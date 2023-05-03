@@ -49,72 +49,58 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name_err = "Please enter a name.";
   } else {
     $name = trim($_POST["name"]);
-    if (!ctype_alnum(str_replace(array("@", "-", "_"), "", $name))) {
-      $name_err = "name can only contain letters, numbers and symbols like '@', '_', or '-'.";
-    } else {
-      # Prepare a select statement
-      $sql = "SELECT id FROM users WHERE name = ?";
+    # Prepare a select statement
+    $sql = "SELECT id FROM users WHERE name = ?";
 
-      if ($stmt = mysqli_prepare($link, $sql)) {
-        # Bind variables to the statement as parameters
-        mysqli_stmt_bind_param($stmt, "s", $param_name);
+    if ($stmt = mysqli_prepare($link, $sql)) {
+      # Bind variables to the statement as parameters
+      mysqli_stmt_bind_param($stmt, "s", $param_name);
 
-        # Set parameters
-        $param_name = $name;
+      # Set parameters
+      $param_name = $name;
 
-        # Execute the prepared statement 
-        if (mysqli_stmt_execute($stmt)) {
-          # Store result
-          mysqli_stmt_store_result($stmt);
+      # Execute the prepared statement 
+      if (mysqli_stmt_execute($stmt)) {
+        # Store result
+        mysqli_stmt_store_result($stmt);
 
-          # Check if name is already registered
-          if (mysqli_stmt_num_rows($stmt) == 1) {
-            $name_err = "This name is already registered.";
-          }
-        } else {
-          echo "<script>" . "alert('Oops! Something went wrong. Please try again later.')" . "</script>";
-        }
-
-        # Close statement 
-        mysqli_stmt_close($stmt);
+      } else {
+        echo "<script>" . "alert('Oops! Something went wrong. Please try again later.')" . "</script>";
       }
+
+      # Close statement 
+      mysqli_stmt_close($stmt);
     }
+    
   }
 
   if (empty(trim($_POST["password"]))) {
     $password_err = "Please enter a password.";
   } else {
     $password = trim($_POST["password"]);
-    if (!ctype_alnum(str_replace(array("@", "-", "_"), "", $password))) {
-      $password_err = "password can only contain letters, numbers and symbols like '@', '_', or '-'.";
-    } else {
-      # Prepare a select statement
-      $sql = "SELECT id FROM users WHERE password = ?";
+    # Prepare a select statement
+    $sql = "SELECT id FROM users WHERE password = ?";
 
-      if ($stmt = mysqli_prepare($link, $sql)) {
-        # Bind variables to the statement as parameters
-        mysqli_stmt_bind_param($stmt, "s", $param_password);
+    if ($stmt = mysqli_prepare($link, $sql)) {
+      # Bind variables to the statement as parameters
+      mysqli_stmt_bind_param($stmt, "s", $param_password);
 
-        # Set parameters
-        $param_password = $password;
+      # Set parameters
+      $param_password = $password;
 
-        # Execute the prepared statement 
-        if (mysqli_stmt_execute($stmt)) {
-          # Store result
-          mysqli_stmt_store_result($stmt);
+      # Execute the prepared statement 
+      if (mysqli_stmt_execute($stmt)) {
+        # Store result
+        mysqli_stmt_store_result($stmt);
 
-          # Check if password is already registered
-          if (mysqli_stmt_num_rows($stmt) == 1) {
-            $password_err = "This password is already registered.";
-          }
-        } else {
-          echo "<script>" . "alert('Oops! Something went wrong. Please try again later.')" . "</script>";
-        }
-
-        # Close statement 
-        mysqli_stmt_close($stmt);
+      } else {
+        echo "<script>" . "alert('Oops! Something went wrong. Please try again later.')" . "</script>";
       }
+
+      # Close statement 
+      mysqli_stmt_close($stmt);
     }
+    
   }
 
   # Validate email 
