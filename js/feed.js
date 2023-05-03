@@ -51,16 +51,40 @@ function disappear(cName){
 var hearts = document.getElementsByClassName("heart");  
 for(i=0; i<hearts.length; i++){
     var l = hearts[i].innerHTML;
-    hearts[i].addEventListener("click", function(e){
-        if(e.target.classList[1] == "bx-heart"){
-            e.target.classList.remove("bx-heart");
-            e.target.classList.add("bxs-heart");
-            e.target.parentNode.parentNode.childNodes[3].innerText = parseInt(e.target.parentNode.parentNode.childNodes[3].innerText)+1;
-        }
-        else{
-            e.target.classList.add("bx-heart");
-            e.target.classList.remove("bxs-heart");
-            e.target.parentNode.parentNode.childNodes[3].innerText = parseInt(e.target.parentNode.parentNode.childNodes[3].innerText)-1;
-        }  
-    });
+    hearts[i].addEventListener("click", likes);
+}
+
+function likes(e){
+    if(e.target.classList[1] == "bx-heart"){
+        e.target.classList.remove("bx-heart");
+        e.target.classList.add("bxs-heart");
+        e.target.parentNode.parentNode.childNodes[1].innerText = parseInt(e.target.parentNode.parentNode.childNodes[1].innerText)+1;
+        
+    }
+    else{
+        e.target.classList.add("bx-heart");
+        e.target.classList.remove("bxs-heart");
+        e.target.parentNode.parentNode.childNodes[1].innerText = parseInt(e.target.parentNode.parentNode.childNodes[1].innerText)-1;
+    }  
+}
+
+addBtn = document.getElementsByClassName("add-btn")[0];
+addBtn.addEventListener("click", addIngredient);
+
+function addIngredient(){
+    var ing = document.getElementById("ingredient");
+    var quantity = document.getElementById("howMuch");
+    console.log(ing);
+    const newIng = document.createElement("td");
+    newIng.innerText = ing.value;
+    const newQuan = document.createElement("td");
+    newQuan.innerText = quantity.value;
+    const added = document.createElement("tr");
+    added.appendChild(newIng);
+    added.appendChild(newQuan);
+    const table = document.getElementById("ingredients");
+    table.appendChild(added);
+    added.addEventListener("mouseover", (e)=>{e.target.parentNode.style.backgroundColor = "var(--color1)"})
+    added.addEventListener("mouseout", (e)=>{e.target.parentNode.style.backgroundColor = "var(--color2)"})
+
 }

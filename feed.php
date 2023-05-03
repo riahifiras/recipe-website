@@ -311,35 +311,35 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
             </h2>
             <button class="exit"><i class='bx bx-x'></i></button>
         </div>
-        <a href="profile.html" class="notif">
+        <a href="profile.php" class="notif">
             <img class="profile-pic" src="assets/unnamed.png" alt="">
             <span><b>kattous</b> has a new recipe</span>
         </a>
-        <a href="profile.html" class="notif">
+        <a href="profile.php" class="notif">
             <img class="profile-pic" src="assets/unnamed.png" alt="">
             <span><b>kattous far7an</b> has a new recipe</span> 
         </a>
-        <a href="profile.html" class="notif">
+        <a href="profile.php" class="notif">
             <img class="profile-pic" src="assets/unnamed.png" alt="">
             <span><b>kattous farhoud</b> likes your new recipe</span>
         </a>
-        <a href="profile.html" class="notif">
+        <a href="profile.php" class="notif">
             <img class="profile-pic" src="assets/unnamed.png" alt="">
             <span><b>kattous farhoud</b> likes your new recipe</span>
         </a> 
-        <a href="profile.html" class="notif">
+        <a href="profile.php" class="notif">
             <img class="profile-pic" src="assets/unnamed.png" alt="">
             <span><b>kattous farhoud</b> likes your new recipe</span>
         </a>
-        <a href="profile.html" class="notif">
+        <a href="profile.php" class="notif">
             <img class="profile-pic" src="assets/unnamed.png" alt="">
             <span><b>kattous farhoud</b> likes your new recipe</span>
         </a> 
-        <a href="profile.html" class="notif">
+        <a href="profile.php" class="notif">
             <img class="profile-pic" src="assets/unnamed.png" alt="">
             <span><b>kattous farhoud</b> likes your new recipe</span>
         </a> 
-        <a href="profile.html" class="notif">
+        <a href="profile.php" class="notif">
             <img class="profile-pic" src="assets/unnamed.png" alt="">
             <span><b>kattous farhoud</b> likes your new recipe</span>
         </a> 
@@ -416,7 +416,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                 
                 <ul class="top10">
                     <li>
-                        <a href="profile.html" class="link-to-profile">
+                        <a href="profile.php" class="link-to-profile">
                         <div id="first">
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous farhoud</span>
@@ -425,7 +425,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
                     
                     <li>
-                        <a href="profile.html" class="link-to-profile">
+                        <a href="profile.php" class="link-to-profile">
                         <div id="second">
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous mezyen</span>
@@ -434,7 +434,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
                     
                     <li>
-                        <a href="profile.html" class="link-to-profile">
+                        <a href="profile.php" class="link-to-profile">
                         <div id="third">
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous far7an</span>
@@ -443,7 +443,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
                     
                     <li>
-                    <a href="profile.html" class="link-to-profile">
+                    <a href="profile.php" class="link-to-profile">
                         <div>
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous ji3an</span>
@@ -452,7 +452,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
                     
                     <li>
-                    <a href="profile.html" class="link-to-profile">
+                    <a href="profile.php" class="link-to-profile">
                         <div>
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous chab3an</span>
@@ -461,7 +461,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
                     
                     <li>
-                    <a href="profile.html" class="link-to-profile">
+                    <a href="profile.php" class="link-to-profile">
                         <div>
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous chef</span>
@@ -470,7 +470,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
                     
                     <li>
-                    <a href="profile.html" class="link-to-profile">
+                    <a href="profile.php" class="link-to-profile">
                         <div>
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous 7azin</span>
@@ -479,7 +479,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
                     
                     <li>
-                    <a href="profile.html" class="link-to-profile">
+                    <a href="profile.php" class="link-to-profile">
                         <div>
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous omi sisi</span>
@@ -488,7 +488,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
                     
                     <li>
-                    <a href="profile.html" class="link-to-profile">
+                    <a href="profile.php" class="link-to-profile">
                         <div>
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous mda7da7</span>
@@ -497,7 +497,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
 
                     <li>
-                    <a href="profile.html" class="link-to-profile">
+                    <a href="profile.php" class="link-to-profile">
                         <div>
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous</span>
@@ -516,7 +516,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
             </a>
             <div class="buttons">
             
-            <a href="profile.html" class="link-to-profile">
+            <a href="profile.php" class="link-to-profile">
             <button class="button profile">
                 <div>
                     <img class="profile-pic" src="assets/unnamed.png" alt="">
@@ -571,106 +571,55 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
             
         <div class="medium">
             <br>
-            <div class="post">
-                <div class="post-info-top">
-                    <div class="top-left">
-                        <a href="profile.html" class="link-to-profile"><div class="author">
-                            <img src="assets\unnamed.png" alt="couldn't load image" class="author-image">
-                            <h3 class="author-name">Malak</h3>
-                        </div></a>
-                        <div class="time">
-                            <span> •13h</span>
-                        </div>
-                    </div>
-                    <button class="post-more"><i class='bx bx-dots-horizontal-rounded  menu' ></i></button>
-                </div>
-                <div class="post-info">
-                    <div class="images">
-                        <a href="recipe.html"><img src="assets\burger.png" alt="" class="food-pics image1"></a>
-                    </div>
-                    <div class="reactions">
-                        <div class="likes">
-                            <button class="heart"><i class='bx bx-heart' style='color:#ff0000'  ></i></button>
-                            <p>4500</p>
-                        </div>
-                    </div>
+            <?php
+                # Include connection
+                require_once "config.php";
 
-                    <div class="description">
-                        <p class="steps">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor perferendis dolore eum cumque, deleniti sapiente amet omnis ipsam vitae quae perspiciatis molestiae, quidem eveniet recusandae nostrum, libero maxime earum hic.
-                        </p>
-                    </div>
-                </div>
-                
-            </div>
-            <br>
-            <hr>
-            <br>
-            <div class="post">
-                <div class="post-info-top">
-                    <div class="top-left">
-                        <a href="profile.html" class="link-to-profile"><div class="author">
-                            <img src="assets\unnamed.png" alt="couldn't load image" class="author-image">
-                            <h3 class="author-name">Malak</h3>
-                        </div></a>
-                        <div class="time">
-                            <span> •13h</span>
-                        </div>
-                    </div>
-                    <button class="post-more"><i class='bx bx-dots-horizontal-rounded  menu' ></i></button>
-                </div>
-                <div class="post-info">
-                    <div class="images">
-                        <a href="recipe.html"><img src="assets\burger.png" alt="" class="food-pics image1"></a>
-                    </div>
-                    <div class="reactions">
-                        <div class="likes">
-                            <button class="heart"><i class='bx bx-heart' style='color:#ff0000'  ></i></button>
-                            <p>4500</p>
-                        </div>
-                    </div>
-                    <div class="description">
-                        <p class="steps">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor perferendis dolore eum cumque, deleniti sapiente amet omnis ipsam vitae quae perspiciatis molestiae, quidem eveniet recusandae nostrum, libero maxime earum hic.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <hr>
-            <br>
-            <div class="post">
-                <div class="post-info-top">
-                    <div class="top-left">
-                        <a href="profile.html" class="link-to-profile"><div class="author">
-                            <img src="assets\unnamed.png" alt="couldn't load image" class="author-image">
-                            <h3 class="author-name">Malak</h3>
-                        </div></a>
-                        <div class="time">
-                            <span> •13h</span>
-                        </div>
-                    </div>
-                    <button class="post-more"><i class='bx bx-dots-horizontal-rounded  menu' ></i></button>
-                </div>
-                <div class="post-info">
-                    <div class="images">
-                        <a href="recipe.html"><img src="assets\burger.png" alt="" class="food-pics image1"></a>
-                    </div>
-                    <div class="reactions">
-                        <div class="likes">
-                            <button class="heart"><i class='bx bx-heart' style='color:#ff0000'  ></i></button>
-                            <p>4500</p>
-                        </div>
-                    </div>
-                    <div class="description">
-                        <p class="steps">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor perferendis dolore eum cumque, deleniti sapiente amet omnis ipsam vitae quae perspiciatis molestiae, quidem eveniet recusandae nostrum, libero maxime earum hic.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>    
+                $sql = "SELECT * from posts";
+                $result = mysqli_query($link, $sql);
 
+                // Loop through the posts and display them in a feed
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $sql2 = "SELECT name FROM users where user_id=".htmlspecialchars($row['user_id']);
+                    $result2 = mysqli_query($link, $sql2);
+                    $row2 = mysqli_fetch_assoc($result2);
+                    echo '<div class="post">';
+                    echo     '<div class="post-info-top">';
+                    echo         '<div class="top-left">';
+                    echo             '<a href="profile.php" class="link-to-profile"><div class="author">';
+                    echo                 '<img src="assets\unnamed.png" alt="couldnt load image" class="author-image">';
+                    echo                 '<h3 class="author-name">'.$row2['name'].'</h3>';
+                    echo             '</div></a>';
+                    echo             '<div class="time">';
+                    echo                 '<span> •13h</span>';
+                    echo             '</div>';
+                    echo         '</div>';
+                    echo         '<button class="post-more"><i class="bx bx-dots-horizontal-rounded  menu" ></i></button>';
+                    echo     '</div>';
+                    echo     '<div class="post-info">';
+                    echo         '<div class="images">';
+                    echo             '<a href="recipe.html"><img src="'.htmlspecialchars($row['picture']).'"alt="" class="food-pics image1"></a>';
+                    echo         '</div>';
+                    echo         '<div class="reactions">';
+                    echo             '<div class="likes">';
+                    echo                 '<button class="heart"><i class="bx bx-heart" style="color:#ff0000"  ></i></button>';
+                    echo                 '<p>'.htmlspecialchars($row['num_likes']).'</p>';
+                    echo             '</div>';
+                    echo         '</div>';
+
+                    echo         '<div class="description">';
+                    echo             '<p class="steps">' . nl2br(htmlspecialchars($row['description'])) . '</p>';
+                    echo         '</div>';
+                    echo     '</div>';
+                        
+                    echo '</div>';
+                    echo '<br>';
+                    echo '<hr>';
+                    echo '<br>';
+                }
+
+            ?>
+            
         <div class="right">
             <a href="recipe.html" class="recipe-of-the-week">
                 <h2>
@@ -697,7 +646,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                 
                 <ul class="top10">
                     <li>
-                        <a href="profile.html" class="link-to-profile">
+                        <a href="profile.php" class="link-to-profile">
                         <div id="first">
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous farhoud</span>
@@ -706,7 +655,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
                     
                     <li>
-                        <a href="profile.html" class="link-to-profile">
+                        <a href="profile.php" class="link-to-profile">
                         <div id="second">
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous mezyen</span>
@@ -715,7 +664,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
                     
                     <li>
-                        <a href="profile.html" class="link-to-profile">
+                        <a href="profile.php" class="link-to-profile">
                         <div id="third">
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous far7an</span>
@@ -724,7 +673,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
                     
                     <li>
-                    <a href="profile.html" class="link-to-profile">
+                    <a href="profile.php" class="link-to-profile">
                         <div>
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous ji3an</span>
@@ -733,7 +682,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
                     
                     <li>
-                    <a href="profile.html" class="link-to-profile">
+                    <a href="profile.php" class="link-to-profile">
                         <div>
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous chab3an</span>
@@ -742,7 +691,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
                     
                     <li>
-                    <a href="profile.html" class="link-to-profile">
+                    <a href="profile.php" class="link-to-profile">
                         <div>
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous chef</span>
@@ -751,7 +700,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
                     
                     <li>
-                    <a href="profile.html" class="link-to-profile">
+                    <a href="profile.php" class="link-to-profile">
                         <div>
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous 7azin</span>
@@ -760,7 +709,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
                     
                     <li>
-                    <a href="profile.html" class="link-to-profile">
+                    <a href="profile.php" class="link-to-profile">
                         <div>
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous omi sisi</span>
@@ -769,7 +718,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
                     
                     <li>
-                    <a href="profile.html" class="link-to-profile">
+                    <a href="profile.php" class="link-to-profile">
                         <div>
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous mda7da7</span>
@@ -778,7 +727,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </li>
 
                     <li>
-                    <a href="profile.html" class="link-to-profile">
+                    <a href="profile.php" class="link-to-profile">
                         <div>
                             <img class="profile-pic" src="assets/unnamed.png" alt="">
                             <span>kattous</span>

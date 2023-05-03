@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $username_err = "Username can only contain letters, numbers and symbols like '@', '_', or '-'.";
     } else {
       # Prepare a select statement
-      $sql = "SELECT id FROM users WHERE username = ?";
+      $sql = "SELECT user_id FROM users WHERE username = ?";
 
       if ($stmt = mysqli_prepare($link, $sql)) {
         # Bind variables to the statement as parameters
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $name = trim($_POST["name"]);
     # Prepare a select statement
-    $sql = "SELECT id FROM users WHERE name = ?";
+    $sql = "SELECT user_id FROM users WHERE name = ?";
 
     if ($stmt = mysqli_prepare($link, $sql)) {
       # Bind variables to the statement as parameters
@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $password = trim($_POST["password"]);
     # Prepare a select statement
-    $sql = "SELECT id FROM users WHERE password = ?";
+    $sql = "SELECT user_id FROM users WHERE password = ?";
 
     if ($stmt = mysqli_prepare($link, $sql)) {
       # Bind variables to the statement as parameters
@@ -112,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $email_err = "Please enter a valid email address.";
     } else {
       # Prepare a select statement
-      $sql = "SELECT id FROM users WHERE email = ?";
+      $sql = "SELECT user_id FROM users WHERE email = ?";
 
       if ($stmt = mysqli_prepare($link, $sql)) {
         # Bind variables to the statement as parameters
