@@ -519,7 +519,18 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
             <a href="profile.php" class="link-to-profile">
             <button class="button profile">
                 <div>
-                    <img class="profile-pic" src="assets/unnamed.png" alt="">
+                    <?php
+                        # Include connection
+                        require_once "config.php";
+                        $id = $_SESSION["id"];
+                        $username = $_SESSION["username"];
+                        $_SESSION["loggedin"] = TRUE;
+                        
+                        $sql="SELECT * FROM users WHERE user_id=".$id;
+                        $result = mysqli_query($link, $sql);
+                        $row = mysqli_fetch_assoc($result);
+                        echo '<img class="profile-pic" src="'.htmlspecialchars($row['profile_pic']).'" alt="">';
+                    ?>
                     <span class="left-btn">  Profile</span>
                 </div>
             </button>
@@ -580,14 +591,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
 
                 // Loop through the posts and display them in a feed
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $sql2 = "SELECT name FROM users where user_id=".htmlspecialchars($row['user_id']);
+                    $sql2 = "SELECT name,profile_pic FROM users where user_id=".htmlspecialchars($row['user_id']);
                     $result2 = mysqli_query($link, $sql2);
                     $row2 = mysqli_fetch_assoc($result2);
                     echo '<div class="post">';
                     echo     '<div class="post-info-top">';
                     echo         '<div class="top-left">';
                     echo             '<a href="profile.php" class="link-to-profile"><div class="author">';
-                    echo                 '<img src="assets\unnamed.png" alt="couldnt load image" class="author-image">';
+                    echo                 '<img src="'.$row2['profile_pic'].'" alt="couldnt load image" class="author-image">';
                     echo                 '<h3 class="author-name">'.$row2['name'].'</h3>';
                     echo             '</div></a>';
                     echo             '<div class="time">';
