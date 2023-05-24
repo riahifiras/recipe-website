@@ -1,49 +1,50 @@
 <?php
+session_start();
 # Include connection
 require_once "config.php";
 
 # Define variables and initialize with empty values
-$username_err = $email_err = $password_err = $name_err ="";
-$username = $email = $password = $name ="";
+$username_err = $email_err = $password_err = $name_err = "";
+$username = $email = $password = $name = "";
 
 # Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  # Validate username
-  if (empty(trim($_POST["username"]))) {
-    $username_err = "Please enter a username.";
-  } else {
-    $username = trim($_POST["username"]);
-    if (!ctype_alnum(str_replace(array("@", "-", "_"), "", $username))) {
-      $username_err = "Username can only contain letters, numbers and symbols like '@', '_', or '-'.";
+    # Validate username
+    if (empty(trim($_POST["username"]))) {
+        $username_err = "Please enter a username.";
     } else {
-      # Prepare a select statement
-      $sql = "SELECT user_id FROM users WHERE username = ?";
-
-      if ($stmt = mysqli_prepare($link, $sql)) {
-        # Bind variables to the statement as parameters
-        mysqli_stmt_bind_param($stmt, "s", $param_username);
-
-        # Set parameters
-        $param_username = $username;
-
-        # Execute the prepared statement 
-        if (mysqli_stmt_execute($stmt)) {
-          # Store result
-          mysqli_stmt_store_result($stmt);
-
-          # Check if username is already registered
-          if (mysqli_stmt_num_rows($stmt) == 1) {
-            $username_err = "This username is already registered.";
-          }
+        $username = trim($_POST["username"]);
+        if (!ctype_alnum(str_replace(array("@", "-", "_"), "", $username))) {
+            $username_err = "Username can only contain letters, numbers and symbols like '@', '_', or '-'.";
         } else {
-          echo "<script>" . "alert('Oops! Something went wrong. Please try again later.')" . "</script>";
-        }
+            # Prepare a select statement
+            $sql = "SELECT user_id FROM users WHERE username = ?";
 
-        # Close statement 
-        mysqli_stmt_close($stmt);
-      }
+            if ($stmt = mysqli_prepare($link, $sql)) {
+                # Bind variables to the statement as parameters
+                mysqli_stmt_bind_param($stmt, "s", $param_username);
+
+                # Set parameters
+                $param_username = $username;
+
+                # Execute the prepared statement 
+                if (mysqli_stmt_execute($stmt)) {
+                    # Store result
+                    mysqli_stmt_store_result($stmt);
+
+                    # Check if username is already registered
+                    if (mysqli_stmt_num_rows($stmt) == 1) {
+                        $username_err = "This username is already registered.";
+                    }
+                } else {
+                    echo "<script>alert('Oops! Something went wrong. Please try again later.');</script>";
+                }
+
+                # Close statement 
+                mysqli_stmt_close($stmt);
+            }
+        }
     }
-  }
 
   if (empty(trim($_POST["name"]))) {
     $name_err = "Please enter a name.";
@@ -167,8 +168,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       # Execute the prepared statement
     if (mysqli_stmt_execute($stmt)) {
+        $_SESSION["username"] = $username;
         echo "<script>" . "alert('Registeration completed successfully. Login to continue.');" . "</script>";
-        echo "<script>" . "window.location.href='./login.php';" . "</script>";
+        echo "<script>" . "window.location.href='./index.html';" . "</script>";
         exit;
       } else {
         echo "<script>" . "alert('Oops! Something went wrong. Please try again later.');" . "</script>";
@@ -178,9 +180,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       mysqli_stmt_close($stmt);
     }
   }
-
-  # Close connection
-  mysqli_close($link);
+  
+    # Close the connection
+    mysqli_close($link);
 }
 ?>
 <!DOCTYPE html>

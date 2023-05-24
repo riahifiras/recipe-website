@@ -24,8 +24,7 @@
         $row = mysqli_fetch_assoc($result);
 
         
-        echo '<div class="background-pic">';
-        echo '</div>';
+        echo '<div class="background-pic" style="background-image: url(haa.png);"></div>';
         echo '<header class="top">';
         echo '    <img src="'.htmlspecialchars($row['profile_pic']).'" alt="" class="profile-pic">';
         echo '    <h2 class="name">'.htmlspecialchars($row['name']).'</h2>';

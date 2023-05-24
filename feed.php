@@ -652,6 +652,61 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                 <img src="assets\burger.png" alt="" class="rotw-pic">
                 <h2 class="rotw-name">French Baguette</h2>
             </a>
+            
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="haa.png" alt="" class="bg-img">
+                        <img src="assets/unnamed.png" alt="" class="profile-img">
+                        <h4 id="first" class="name">kattous farhoud</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="haa.png" alt="" class="bg-img">
+                        <img src="assets/unnamed.png" alt="" class="profile-img">
+                        <h4 id="second" class="name">kattous mezyen</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="haa.png" alt="" class="bg-img">
+                        <img src="assets/unnamed.png" alt="" class="profile-img">
+                        <h4 id="third" class="name">kattous far7an</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="haa.png" alt="" class="bg-img">
+                        <img src="assets/unnamed.png" alt="" class="profile-img">
+                        <h4 class="name">kattous chab3an</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="haa.png" alt="" class="bg-img">
+                        <img src="assets/unnamed.png" alt="" class="profile-img">
+                        <h4 class="name">kattous ji3an</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="haa.png" alt="" class="bg-img">
+                        <img src="assets/unnamed.png" alt="" class="profile-img">
+                        <h4 class="name">kattous chef</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="haa.png" alt="" class="bg-img">
+                        <img src="assets/unnamed.png" alt="" class="profile-img">
+                        <h4 class="name">kattous 7azin</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="haa.png" alt="" class="bg-img">
+                        <img src="assets/unnamed.png" alt="" class="profile-img">
+                        <h4 class="name">kattous omi sisi</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="haa.png" alt="" class="bg-img">
+                        <img src="assets/unnamed.png" alt="" class="profile-img">
+                        <h4 class="name">kattous mda7da7</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="haa.png" alt="" class="bg-img">
+                        <img src="assets/unnamed.png" alt="" class="profile-img">
+                        <h4 class="name">kattous</h4>
+                    </div>
+                </div>
+            </div>
             <div class="leaderboard">
                 <h3> La creme de la creme</h3>
                 
@@ -752,5 +807,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
     <script src="js\feed.js"></script>
     <script src="js\lang.js"></script>
     <script src="js\dark.js"></script>
+    <script src="js\slider.js"></script>
 </body>
 </html>

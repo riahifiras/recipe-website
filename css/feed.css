@@ -106,7 +106,7 @@ body{
     gap: 10px;
     background-color: var(--color5);
     border: none;
-    color: white;
+    color: var(--white);
     align-items: center;
     margin-top: auto;
     margin-bottom: auto;
@@ -147,14 +147,17 @@ body{
 }
 
 .food-pics{
+    aspect-ratio: 16/9;
     width: 100%;
-    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
 }
 
 .clickable-img{
     border: none;
     background-color: rgba(0, 0, 0, 0);
     cursor: pointer;
+
 }
 
 .dot, .menu{
@@ -273,6 +276,7 @@ body{
 }
 
 .leaderboard {
+    display: none;
     
     /* border-style: outset; */
     /* border: 1px solid black; */
@@ -612,6 +616,14 @@ textarea{
 }
 
 @media screen and (max-width: 700px){
+    .slider-container{
+        display: none;
+    }
+    
+    .leaderboard{
+        display: block;
+    }
+
     #above{
         display: flex;
     }
@@ -685,7 +697,69 @@ textarea{
     }
 }
 
+.profile-img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-top: -40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.bg-img{
+    margin-top: -30px;
+    height: 50%;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--color2);
+  }
+  
+  .slider {
+    width: 1000%;
+    height: 200px;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--black);
+    background-color: var(--color2);
+    border-radius: 5px;
+  }
+
 @media screen and (max-width: 400px){
+    .slider-container{
+        display: none;
+    }
+    
+    .leaderboard{
+        display: block;
+    }
+
+
     #above{
         display: flex;
     }
