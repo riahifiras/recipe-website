@@ -170,7 +170,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_stmt_execute($stmt)) {
         $_SESSION["username"] = $username;
         echo "<script>" . "alert('Registeration completed successfully. Login to continue.');" . "</script>";
-        echo "<script>" . "window.location.href='./index.html';" . "</script>";
+        echo "<script>" . "window.location.href='./finish.php';" . "</script>";
         exit;
       } else {
         echo "<script>" . "alert('Oops! Something went wrong. Please try again later.');" . "</script>";

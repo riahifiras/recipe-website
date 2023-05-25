@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+
+:root{
+    --gold: #fed872;
+    --white: #fff;
+    --color1: #ede0d4;
+    --color2: #e6ccb2;
+    --color3: #ddb892;
+    --color4: #b08968;
+    --color5: #7f5539;
+    --color6: #9c6644;
+    --black: #232b2b;
+    --shadow: box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--color1);
+    font-family: 'Roboto';
+    font-size: 0.75em;
+    color: var(--black);
+}
+
+h3{
+    font-size: 2.2em;
+    font-weight: 800;
+    color: var(--black);
+}
+
+textarea{
+    resize: none;
+    font-size: 1.2em;
+    width: 60vw;
+}
+
+
+.profile-pic, .bg-pic{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
+}
+
+.empty{
+    height: 140px;
+    width: 140px;
+    border-radius: 5px;
+}
+
+.finish{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60vw;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 10px;
+    font-size: 1.2em;
+}
+
+.btn{
+    width: 100%;
+    height: 52px;
+    justify-content: center;
+    display: flex;
+    font-size: 1.6em;
+    gap: 10px;
+    background-color: var(--color5);
+    border: none;
+    color: var(--white);
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 0.2s ease;
+}
+
+.upload:hover, .btn:hover{
+    background-color: var(--color6);
+}
+
+.hidden{
+    display: none;
+}
+
+.upload{
+    background-color: var(--color5);
+    border-radius: 5px;
+    color: var(--white);
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
