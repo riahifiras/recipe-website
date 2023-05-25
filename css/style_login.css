@@ -147,6 +147,11 @@ body{
     right: 10px;
 }
 
+.remember{
+    display: flex;
+    flex-direction: row;
+}
+
 @media screen and (max-width: 700px){
     .container{
         width: 300px;

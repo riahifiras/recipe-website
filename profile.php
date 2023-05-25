@@ -59,7 +59,7 @@
         $id = $_SESSION["id"];
         $username = $_SESSION["username"];
         $_SESSION["loggedin"] = TRUE;
-        $sql = 'SELECT * from posts where user_id='.$id;
+        $sql = 'SELECT * from posts where user_id='.$id.' ORDER BY post_id DESC';
         $result = mysqli_query($link, $sql);
 
         

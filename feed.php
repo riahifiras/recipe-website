@@ -31,7 +31,56 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
            Brika
         </a>
     </div>
-    <div class="add">
+    <?php
+        # Include connection
+        require_once "config.php";
+        
+        if (!isset($_SESSION["id"]) || !isset($_SESSION["username"])) {
+            // Redirect to login page or handle unauthorized access
+            exit;
+        }
+        
+        $id = $_SESSION["id"];
+        $username = $_SESSION["username"];
+        $_SESSION["loggedin"] = TRUE;
+        
+        $msg = "";
+        
+        // If upload button is clicked and form data is present...
+        if (isset($_POST['upload']) && !empty($_FILES["uploadfile"]["name"])) {
+        
+            $filename = $_FILES["uploadfile"]["name"];
+            $tempname = $_FILES["uploadfile"]["tmp_name"];
+            $folder = "./assets/food/" . $filename;
+            $description = $_POST['description']; // Get the description from the textarea
+            $full = "assets/food/".$filename;
+            $db = mysqli_connect("localhost", "root", "", "recipe");
+        
+            // Get all the submitted data from the form
+            $sql = "INSERT INTO posts (user_id, picture, description) VALUES ('$id', '$full', '$description')";
+            // Execute query
+            
+            
+            if (!empty($filename)) {
+                // Insert the data into the database only if $filename is not empty
+                if (mysqli_query($db, $sql)) {
+                    move_uploaded_file($tempname, $folder);
+                    $filename = ""; // Reset the $filename variable
+            
+                    // Redirect to a different page to prevent duplicate insertions
+                    header("Location: feed.php");
+                    exit(); // Make sure to include this exit statement after the redirect
+                } else {
+                    // Error occurred while executing the query
+                    echo "Error: " . mysqli_error($db);
+                }
+            } else {
+                // $filename is empty, so no action is needed
+            }
+        }
+    ?>
+    <form class="add" method="POST" action="" enctype="multipart/form-data">
+        
         <div class="exit-button">
             <h2>
                 <span class="eng">Add post:</span>
@@ -68,7 +117,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                 <span class="cn">添加说明：</span>
                 <span class="tr">Açıklama ekle:</span>
             </h5>
-            <textarea id="cool" name="description" rows="4" cols="50" placeholder="Description">           
+            <textarea id="cool" name="description" rows="4" cols="50" placeholder="Description" value="">           
             </textarea>
         </div>  
         <div>
@@ -185,10 +234,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                 <span class="cn">选择文件：</span>
                 <span class="tr">Dosyaları seçin:</span>
             </label>
-            <input type="file" name="file-upload" id="file-upload">
+            <input type="file" id="file-upload" name="uploadfile" value="" accept="image/*">
             <label for="file-upload" class="custom-upload-button">Upload File</label>
             <br><br>
-            <button class="box add-btn">
+            <button class="box add-btn" type="submit" name="upload">
                 <span class="eng">Post</span>
                 <span class="fr"></span>
                 <span class="ger">posten</span>
@@ -205,7 +254,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                 <span class="tr">göndermek</span>
             </button>
         </div>
-    </div>
+        </form>
     <div class="pluss" id="pluss">
         <div class="exit-button">
             <h2></h2>
@@ -520,11 +569,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
             <button class="button profile">
                 <div>
                     <?php
-                        # Include connection
-                        require_once "config.php";
-                        $id = $_SESSION["id"];
-                        $username = $_SESSION["username"];
-                        $_SESSION["loggedin"] = TRUE;
+                        
                         
                         $sql="SELECT * FROM users WHERE user_id=".$id;
                         $result = mysqli_query($link, $sql);
@@ -586,7 +631,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                 # Include connection
                 require_once "config.php";
 
-                $sql = "SELECT * from posts";
+                $sql = "SELECT * from posts ORDER BY post_id DESC";
                 $result = mysqli_query($link, $sql);
 
                 // Loop through the posts and display them in a feed

@@ -49,7 +49,7 @@ if (isset($_POST['upload'])) {
             <div class="profile-pic">
                 <img src="assets/unknown.jpg" alt="" class="empty pr">
                 <label for="file-upload1" class="upload">Upload profile image</label><br>
-                <input id="file-upload1" class="hidden" type="file" type="file" accept="image/*" name="uploadfile" value="" />
+                <input id="file-upload1" class="hidden" type="file" accept="image/*" name="uploadfile" value="" />
             </div>    
         </div>
         <hr>

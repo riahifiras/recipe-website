@@ -109,7 +109,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="text" class="username input" placeholder="username" name="user_login" value="<?= $user_login; ?>">
             <small class="text-danger"><?= $user_login_err; ?></small>
             <input type="password" class="password input" placeholder="password" name="user_password" id="password">
-            <small class="text-danger"><?= $user_password_err; ?></small>  
+            <small class="text-danger"><?= $user_password_err; ?></small>
+            <div class="remember">
+              <input type="checkbox" id="remember-me" name="remember">
+              <label for="remember-me">Remember Me</label>
+            </div>
             <button class="btn" type="submit">
               <span class="eng">Log In</span>
               <span class="fr">Connexion</span>
