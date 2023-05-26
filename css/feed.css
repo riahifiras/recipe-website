@@ -153,6 +153,8 @@ body{
     border-radius: 5px;
 }
 
+
+
 .clickable-img{
     border: none;
     background-color: rgba(0, 0, 0, 0);
@@ -335,6 +337,7 @@ li{
 #third{
     color: #4e3104;
 }
+
 
 
 .search-window{

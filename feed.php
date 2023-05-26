@@ -234,7 +234,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                 <span class="cn">选择文件：</span>
                 <span class="tr">Dosyaları seçin:</span>
             </label>
-            <input type="file" id="file-upload" name="uploadfile" value="" accept="image/*">
+            <input type="file" id="file-upload" name="uploadfile" value="" >
             <label for="file-upload" class="custom-upload-button">Upload File</label>
             <br><br>
             <button class="box add-btn" type="submit" name="upload">
@@ -653,9 +653,28 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     echo         '<button class="post-more"><i class="bx bx-dots-horizontal-rounded  menu" ></i></button>';
                     echo     '</div>';
                     echo     '<div class="post-info">';
-                    echo         '<div class="images">';
-                    echo             '<a href="recipe.html"><img src="'.htmlspecialchars($row['picture']).'"alt="" class="food-pics image1"></a>';
-                    echo         '</div>';
+                    $ext = pathinfo($row['picture'], PATHINFO_EXTENSION);
+                    if ($ext == "mp4" || $ext == "avi") {
+                    echo '<div class="images vid">'; 
+                    echo '<a href="recipe.html">';
+                    echo '    <video class="size food-pics image1" controls>';
+                    echo '    <source class="size food-pics image1" src="'.htmlspecialchars($row['picture']).'" type="video/mp4">';
+                    echo '    <source class="size food-pics image1" src="'.htmlspecialchars($row['picture']).'" type="video/ogg">';
+                    echo ' Your browser does not support the video tag.';
+                    echo '</video>';
+                    echo '</a>';
+                    echo '</div>';
+                   }
+                       if ($ext == "jpg" || $ext == "png" || $ext == "jpeg") {
+                    echo '<div class="images">'; 
+                    echo '<a href="recipe.html">';
+                    echo '    <img src="'.htmlspecialchars($row['picture']).'"alt="" class="food-pics image1">';
+                    echo '</a>';
+                    echo '</div>';
+                   }
+                       
+                    // echo             '<a href="recipe.html"><img src="'.htmlspecialchars($row['picture']).'"alt="" class="food-pics image1"></a>';
+                    //echo             '<a href="recipe.html"><img src="'.htmlspecialchars($row['picture']).'"alt="" class="food-pics image1"></a>';
                     echo         '<div class="reactions">';
                     echo             '<div class="likes">';
                     echo                 '<button class="heart"><i class="bx bx-heart" style="color:#ff0000"  ></i></button>';

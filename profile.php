@@ -70,8 +70,23 @@
             echo '<div class="post">';
             echo '    <div class="post-info">';
             echo '        <div class="images">';
-            echo '            <img src="'.htmlspecialchars($row['picture']).'" alt="" class="food-pics image1">';
+            //echo '            <img src="'.htmlspecialchars($row['picture']).'" alt="" class="food-pics image1">';
             echo '        </div>';
+            $ext = pathinfo($row['picture'], PATHINFO_EXTENSION);
+            if ($ext == "mp4" || $ext == "avi"){
+            echo '    <video style="width=100%;height=auto;aspect-ration=16/9" class="size" controls>';
+            echo '    <source class="size" src="'.htmlspecialchars($row['picture']).'" type="video/mp4">';
+            echo '    <source class="size" src="'.htmlspecialchars($row['picture']).'" type="video/ogg">';
+            echo ' Your browser does not support the video tag.';
+            echo '</video>';
+            }
+                if ($ext == "jpg" || $ext == "png" || $ext == "jpeg") {
+                
+            echo '<a href="recipe.html">';
+            echo '    <img src="'.htmlspecialchars($row['picture']).'"alt="" class="food-pics image1 size">';
+            echo '</a>';
+                
+            }
             echo '        <div class="reactions">';
             echo '            <div class="likes">';
             echo '                <i class="bx bx-heart" style="color:#ff0000"  ></i>';
