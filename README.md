@@ -7,15 +7,19 @@ Welcome to the Recipe Website project! This is a platform where users can share 
 Here are some previews of the website:
 
 - Landing Page:
+
 ![Landing Page](https://user-images.githubusercontent.com/120566908/228054143-7d6ea601-01ee-40e3-a269-5853c5a7df81.png)
 
 - Home Page:
+
 ![Home Page](https://user-images.githubusercontent.com/120566908/228054220-13a6b601-87b4-4b4c-a4f5-09b2be7e2d1b.png)
 
 - Profile Page:
+
 ![Profile Page](https://user-images.githubusercontent.com/120566908/228054286-45cd46db-ee9f-477d-9ca5-3e36b9f3ae8a.png)
 
 - Post Page:
+
 ![Post Page](https://user-images.githubusercontent.com/120566908/228054398-71eb6a89-ccc8-4c73-a75f-31604d86a0e3.png)
 
 ## Getting Started
